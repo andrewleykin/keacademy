@@ -1,0 +1,42 @@
+section.hero
+  .container
+    .hero__wrap
+      .hero__info
+        h1.title.hero__title Офлайн академия №1 для продавцов KazanExpress
+        span.hero__subtitle Ничего лишнего - только бизнес!
+        .hero__actions
+          button.btn.hero__actions-btn.js-scroll-to(type="button" data-href="#program") 
+            span Посмотреть программу
+          button.btn.btn--light.btn--icon.hero__actions-btn.js-scroll-to(type="button" data-href="#video") 
+            +icon('play')
+            span Посмотреть видео
+        .hero__slider
+          button.hero__slider-arrow.prev.disabled(type="button" aria-label="Предыдущее курс")
+            +icon('arrow-left')
+          .hero__slider-slider
+            .hero__slide
+              .hero__slide-wrap
+                .hero__slide-info
+                  span.hero__slide-title Ближайший курс
+                  span.hero__slide-subinfo 1 августа 2020, Осталось 20 мест
+                button.hero__slide-btn.js-payment-scroll(type="button" data-date="01.08.2020") Записаться
+            .hero__slide
+              .hero__slide-wrap
+                .hero__slide-info
+                  span.hero__slide-title Следующий курс
+                  span.hero__slide-subinfo 1 августа 2020, Осталось 20 мест
+                button.hero__slide-btn.js-payment-scroll(type="button" data-date="01.09.2020") Записаться
+            .hero__slide
+              .hero__slide-wrap
+                .hero__slide-info
+                  span.hero__slide-title Послеследующий курс
+                  span.hero__slide-subinfo 1 августа 2020, Осталось 20 мест
+                button.hero__slide-btn.js-payment-scroll(type="button" data-date="01.10.2020") Записаться
+          button.hero__slider-arrow.next(type="button" aria-label="Следующее курс")
+            +icon('arrow-right')
+      .hero__view
+        .hero__view-img
+          img(src="https://via.placeholder.com/420x540" alt="Егор Попов")
+        .hero__view-info
+          span.hero__view-name Егор Попов
+          span.hero__view-desc Автор курса

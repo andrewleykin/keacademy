@@ -1,0 +1,27 @@
+section.program#program
+  .container.border-block
+    h2.title.program__title.wow.fadeIn Программа курса
+    span.program__subtitle.wow.fadeIn Спикеры
+    .program__slider
+      button.program__slider-arrow.prev(type="button" aria-label="Предыдущее фото")
+        +icon('circle-arrow-left')
+      .program__slider-slider
+        include ../modules/program-slide
+        include ../modules/program-slide
+        include ../modules/program-slide
+        include ../modules/program-slide
+        include ../modules/program-slide
+      button.program__slider-arrow.next(type="button" aria-label="Следующее фото")
+        +icon('circle-arrow-right')
+    span.program__subtitle.wow.fadeIn Лекции спикера
+    .program__lectures
+      include ../modules/program-lecture-block
+      include ../modules/program-lecture-block
+      include ../modules/program-lecture-block
+      include ../modules/program-lecture-block
+      include ../modules/program-lecture-block
+    .accent.wow.zoomIn
+      .accent__info
+        p Ближайший курс
+        span 1 августа 2020, Осталось 20 мест
+      button.btn.btn--white.accent__btn(type="button" data-remodal-target="free-lesson") Записаться на бесплатный урок

@@ -1,0 +1,9 @@
+.modal.remodal(data-remodal-id="free-lesson-success")
+  button.modal__close(type="button" data-remodal-action="close" aria-label="Закрыть модальное окно")
+    +icon('close')
+  .modal__wrap
+    .modal__icon
+      +icon('success')
+    h4.modal__title Вы успешно записались на бесплатный урок
+    p.modal__text Мы отправили уведомление с подробностями на указанные вами email.
+    button.btn.modal__btn(type="button" data-remodal-action="close") Продолжить

@@ -1,0 +1,67 @@
+.advantages__title
+  margin-bottom 83px
+  @media (max-width $breakpoint-lg)
+    margin-bottom 40px
+
+.advantages__list
+  display flex
+  flex-wrap wrap
+  justify-content space-between
+  margin-bottom -24px
+  @media (max-width $breakpoint-md)
+    margin-bottom -12px
+
+.advantages__item
+  width 100%
+  max-width calc(33% - 24px)
+  padding 24px
+  border-radius 12px
+  margin-bottom 24px
+  &:nth-child(1)
+    background-color #fff7e3
+    .advantages__num
+      color #ffb100
+  &:nth-child(2)
+    background-color rgba(68, 215, 182, 0.1)
+    .advantages__num
+      color #00dbb4
+  &:nth-child(3)
+    background-color #e7f9ff
+    .advantages__num
+      color #00c9ff
+  &:nth-child(4)
+    background-color #e2f4ff
+    .advantages__num
+      color #008fff
+  &:nth-child(5)
+    background-color #fae7fc
+    .advantages__num
+      color #dc00f1
+  &:nth-child(6)
+    background-color #f0e9ff
+    .advantages__num
+      color #7c00ff
+  @media (max-width $breakpoint-lg)
+    padding 12px 24px
+  @media (max-width $breakpoint-md)
+    max-width calc(50% - 8px)
+    margin-bottom 12px
+  @media (max-width $breakpoint-sm)
+    max-width 100%
+
+.advantages__num
+  font-size 48px
+  font-weight 500
+  @media (max-width $breakpoint-lg)
+    font-size 40px
+  @media (max-width $breakpoint-md)
+    font-size 32px
+
+.advantages__text
+  margin-top 16px
+  font-size 20px
+  line-height 1.5
+  @media (max-width $breakpoint-lg)
+    font-size 16px
+  @media (max-width $breakpoint-md)
+    margin-top 8px

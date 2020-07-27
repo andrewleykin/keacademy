@@ -1,0 +1,50 @@
+.reviews__title
+  margin-bottom 53px
+  @media (max-width $breakpoint-sm)
+    margin-bottom 24px
+
+.reviews__list
+  display flex
+  flex-wrap wrap
+  justify-content space-between
+  margin-bottom -24px
+  @media (max-width $breakpoint-md)
+    margin-bottom -12px
+
+.reviews__item
+  border-radius 16px
+  background-color $gray-10
+  max-width calc(50% - 12px)
+  margin-bottom 24px
+  padding 24px
+  @media (max-width $breakpoint-md)
+    margin-bottom 12px
+    max-width 100%
+  @media (max-width $breakpoint-sm)
+    padding 16px 24px
+
+.reviews__text
+  margin-bottom 16px
+  line-height 1.63
+
+.reviews__author
+  display flex
+  align-items center
+
+.reviews__author-img
+  max-width 56px
+  border-radius 50%
+  overflow hidden
+  margin-right 16px
+
+.reviews__author-name
+  font-size 16px
+  font-weight 500
+  line-height 1.5
+  display block
+  margin-bottom 4px
+
+.reviews__author-desc
+  font-size 14px
+  line-height 1.43
+  color $black-54

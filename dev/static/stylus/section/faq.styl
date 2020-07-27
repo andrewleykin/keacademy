@@ -1,0 +1,58 @@
+.faq__title
+  margin-bottom 64px
+  @media (max-width $breakpoint-lg)
+    margin-bottom 40px
+  @media (max-width $breakpoint-sm)
+    margin-bottom 24px
+
+.faq__item
+  border-radius 12px
+  border solid 1px $black-10
+  background-color white
+  padding 18px 24px
+  position relative
+  cursor pointer
+  &:before,
+  &:after
+    content ''
+    display block
+    background-color rgba(#000, 0.38)
+    position absolute
+  &:before
+    width 18px
+    height 2px
+    top 30px
+    right 24px
+  &:after
+    width 2px
+    height 18px
+    top 22px
+    right 32px
+    transition all .2s
+  &+&
+    margin-top 12px
+  &.open
+    &:after
+      opacity 0
+
+.faq__item-title
+  font-size 18px
+  font-weight 500
+  line-height 1.44
+  color #000000
+  display flex
+  align-items center
+  @media (max-width $breakpoint-md)
+    font-size 16px
+    max-width 90%
+
+.faq__content
+  display none
+  margin-top 18px
+  line-height 1.38
+  color $black-54
+  max-width 780px
+  p + p
+    margin-top 1rem
+  @media (max-width $breakpoint-md)
+    font-size 14px

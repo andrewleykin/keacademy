@@ -1,0 +1,63 @@
+.about__title
+  margin-bottom 24px
+
+.about__subtitle
+  max-width 800px
+  margin-bottom 56px
+  @media (max-width $breakpoint-lg)
+    margin-bottom 24px
+
+.about__wrap
+  display flex
+  justify-content space-between
+  @media (max-width $breakpoint-lg)
+    flex-direction column-reverse
+
+.about__info
+  max-width 625px
+  margin-right 10px
+  @media (max-width $breakpoint-lg)
+    margin-right 0
+
+.about__director
+  display flex
+  align-items center
+  margin-bottom 24px
+
+.about__director-img
+  width 140px
+  height 140px
+  border-radius 20px
+  overflow hidden
+  margin-right 36px
+  @media (max-width $breakpoint-sm)
+    width 100px
+    height 100px
+    flex none
+    margin-right 15px
+
+.about__director-name
+  font-size 24px
+  font-weight 500
+  line-height 1.5
+  display block
+  margin-bottom 8px
+  @media (max-width $breakpoint-sm)
+    font-size 18px
+    margin-bottom 0
+
+.about__director-desc
+  font-size 20px
+  line-height 1.2
+  color $black-54
+  @media (max-width $breakpoint-sm)
+    font-size 14px
+
+.about__text
+  line-height 1.6
+
+.about__img
+  max-width 445px
+  @media (max-width $breakpoint-lg)
+    max-width 60%
+    margin 0 auto 24px

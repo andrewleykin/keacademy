@@ -1,0 +1,185 @@
+.hero
+  padding 104px 0 76px
+  overflow hidden
+  @media (max-width $breakpoint-lg)
+    padding 80px 0 60px
+  @media (max-width $breakpoint-lg)
+    padding 60px 0 40px
+  @media (max-width $breakpoint-sm)
+    padding 40px 0
+
+.hero__wrap
+  display flex
+  justify-content space-between
+  @media (max-width $breakpoint-md)
+    display block
+
+.hero__info
+  width 100%
+  max-width 540px
+  margin-right 10px
+  @media (max-width $breakpoint-lg)
+    max-width 55%
+  @media (max-width $breakpoint-lg)
+    max-width 100%
+
+.hero__title
+  margin-bottom 20px
+
+.hero__subtitle
+  font-size 24px
+  line-height 1.5
+  color $black-54
+  @media (max-width $breakpoint-lg)
+    font-size 18px
+
+.hero__actions
+  display flex
+  margin 48px 0
+  @media (max-width $breakpoint-lg)
+    display block
+    margin 24px 0
+
+.hero__actions-btn
+  &+&
+    margin-left 16px
+  @media (max-width $breakpoint-lg)
+    width 100%
+    max-width 480px
+    &+&
+      margin-left 0
+      margin-top 16px
+
+.hero__slider
+  border-top 1px solid $black-10
+  padding-top 48px
+  display flex
+  @media (max-width $breakpoint-md)
+    padding-top 24px
+
+.hero__slider-slider
+  flex auto
+  max-width calc(100% - 72px)
+  position relative
+  .slick-dots
+    position absolute
+    left 20px
+    bottom 10px
+    display flex
+    button
+      width 6px
+      height 6px
+      border-radius 50%
+      background-color rgba(0, 0, 0, 0.12)
+      cursor pointer
+    li.slick-active
+      button
+        background-color $black-38
+    li + li
+      margin-left 4px
+
+.hero__slide-wrap
+  display flex
+  justify-content space-between
+  padding 12px 20px 26px
+  background-color $gray-10
+  font-weight 500
+  @media (max-width $breakpoint-sm)
+    display block
+
+.hero__slide-info
+  font-size 16px
+  line-height 1.5
+  color $black-38
+  @media (max-width $breakpoint-lg)
+    max-width 50%
+  @media (max-width $breakpoint-sm)
+    max-width 100%
+    margin-bottom 10px
+
+.hero__slide-title
+  display block
+  color #000
+
+.hero__slide-btn
+  font-size 18px
+  line-height 1.33
+  color $tomato
+  background-color transparent
+  cursor pointer
+
+.hero__slider-arrow
+  width 36px
+  cursor pointer
+  background-color rgba(0, 0, 0, 0.1)
+  &.disabled
+    background-color $gray-10
+    cursor default
+  &.prev
+    border-top-left-radius 8px
+    border-bottom-left-radius 8px
+    &.disabled
+      border-right 1px solid rgba(0, 0, 0, 0.06)
+  &.next
+    border-top-right-radius 8px
+    border-bottom-right-radius 8px
+    &.disabled
+      border-left 1px solid rgba(0, 0, 0, 0.06)
+  .icon
+    width 20px
+    height 20px
+
+.hero__view
+  position relative
+  align-self flex-start
+  position relative
+  z-index 0
+  &:after
+    content ''
+    display block
+    width 100%
+    height 100%
+    border-radius 20px
+    position absolute
+    background-color #f9f9f9
+    z-index -1
+    bottom 30px
+    left 30px
+  @media (max-width $breakpoint-lg)
+    max-width 40%
+  @media (max-width $breakpoint-lg)
+    max-width 70%
+    margin 100px auto 0
+  @media (max-width $breakpoint-sm)
+    margin-top 40px
+    &:after
+      display none
+
+.hero__view-img
+  border-radius 20px
+  overflow hidden
+
+.hero__view-info
+  position absolute
+  bottom 42px
+  left 32px
+  @media (max-width $breakpoint-sm)
+    bottom 16px
+    left 16px
+
+.hero__view-name
+  font-size 24px
+  font-weight 500
+  line-height 1.46
+  color #000
+  display block
+  margin-bottom 6px
+  @media (max-width $breakpoint-sm)
+    font-size 18px
+
+.hero__view-desc
+  font-size 20px
+  line-height 1.2
+  color $black-54
+  @media (max-width $breakpoint-sm)
+    font-size 16px

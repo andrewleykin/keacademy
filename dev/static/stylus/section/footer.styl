@@ -1,0 +1,94 @@
+.footer
+  padding 36px 0 24px
+
+.footer__logo
+  display flex
+  align-items center
+  margin-bottom 10px
+
+.footer__logo-sub
+  font-size 14px
+  font-weight 500
+  line-height 1.71
+  color $black-24
+  padding-left 14px
+  position relative
+  margin-left 15px
+  &:before
+    content ''
+    display block
+    width 1px
+    height 18px
+    background-color $black-10
+    position absolute
+    left 0
+    top 3px
+
+.footer__main
+  display flex
+  justify-content space-between
+  align-items center
+  @media (max-width $breakpoint-sm)
+    display block
+
+.footer__links
+  display flex
+  @media (max-width $breakpoint-sm)
+    justify-content center
+
+.footer__link
+  width 24px
+  height 24px
+  border-radius 50%
+  background-color $black-24
+  display flex
+  align-items center
+  justify-content center
+  transition all .2s
+  &+&
+    margin-left 16px
+  &:hover
+    background-color $black-54
+  .icon
+    width 24px
+    height 24px
+    fill white
+  img
+    width 20px
+    height 20px
+  @media (max-width $breakpoint-md)
+    width 16px
+    height 16px
+    &+&
+      margin-left 8px
+  @media (max-width $breakpoint-sm)
+    width 24px
+    height 24px
+
+.footer__bottom
+  margin-top 14px
+  position relative
+  padding-top 24px
+  display flex
+  justify-content space-between
+  font-size 14px
+  line-height 1.71
+  color $black-54
+  &:before
+    content ''
+    display block
+    width 100vw
+    height 1px
+    background-color $black-10
+    position absolute
+    top 0
+    left calc(50% - 50vw)
+  a
+    color inherit
+    transition all .2s
+    &:hover
+      color #000
+  @media (max-width $breakpoint-sm)
+    display block
+    p
+      margin-bottom 8px

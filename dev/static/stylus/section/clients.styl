@@ -1,0 +1,69 @@
+.clients__wrap
+  display flex
+  justify-content space-between
+  @media (max-width $breakpoint-md)
+    display block
+
+.clients__info
+  width 100%
+  max-width 35%
+  margin-right 10px
+  @media (max-width $breakpoint-lg)
+    max-width 45%
+  @media (max-width $breakpoint-md)
+    max-width 100%
+    margin-bottom 48px
+
+.clients__title
+  margin-bottom 36px
+  @media (max-width $breakpoint-md)
+    margin-bottom 24px
+
+.clients__subtitle
+  font-size 20px
+  line-height 1.6
+  color $black-54
+  @media (max-width $breakpoint-md)
+    font-size 16px
+
+.clients__list
+  max-width 693px
+  display flex
+  flex-wrap wrap
+  justify-content space-between
+  margin-bottom -48px
+  @media (max-width $breakpoint-lg)
+    display block
+    margin-bottom 0
+  @media (max-width $breakpoint-md)
+    max-width 100%
+
+.clients__item
+  max-width 50%
+  margin-bottom 48px
+  @media (max-width $breakpoint-lg)
+    max-width 100%
+    display flex
+    align-items center
+  @media (max-width $breakpoint-sm)
+    margin-bottom 0
+    &+&
+      margin-top 24px
+
+.clients__img
+  max-width 80px
+  border-radius 12px
+  overflow hidden
+  margin-bottom 24px
+  @media (max-width $breakpoint-lg)
+    flex none
+    margin-bottom 0
+    margin-right 24px
+
+.clients__text
+  font-size 18px
+  line-height 1.44
+  b
+    font-weight 500
+  @media (max-width $breakpoint-md)
+    font-size 16px

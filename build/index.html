@@ -11,9 +11,720 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
     <body>
       <div class="wrapper">
+        <header class="header">
+          <div class="container">
+            <div class="header__wrap"><a class="header__logo" href="/"><img src="app/img/general/logo.svg" alt="KazanExpress"></a>
+              <div class="header__menu">
+                <nav class="menu">
+                  <button class="menu__item js-scroll-to" href="#" data-href="#about">О курсе</button>
+                  <button class="menu__item js-scroll-to" href="#" data-href="#clients">Для кого курс?</button>
+                  <button class="menu__item js-scroll-to" href="#" data-href="#program">Программа</button>
+                  <button class="menu__item js-scroll-to" href="#" data-href="#reviews">Отзывы</button>
+                  <button class="menu__item js-scroll-to" href="#" data-href="#payment">Стоимость</button>
+                </nav>
+              </div>
+              <div class="header__actions"><a class="header__tg" href="#"><img src="app/img/general/tg.svg" alt="telegram icon"></a><a class="header__payment" href="#"><img src="app/img/general/rocket.svg" alt="rocket icon"><span>Оплата</span></a></div>
+            </div>
+          </div>
+        </header>
+        <div class="main">
+          <section class="hero">
+            <div class="container">
+              <div class="hero__wrap">
+                <div class="hero__info">
+                  <h1 class="title hero__title">Офлайн академия №1 для продавцов KazanExpress</h1><span class="hero__subtitle">Ничего лишнего - только бизнес!</span>
+                  <div class="hero__actions">
+                    <button class="btn hero__actions-btn js-scroll-to" type="button" data-href="#program"> <span>Посмотреть программу</span></button>
+                    <button class="btn btn--light btn--icon hero__actions-btn js-scroll-to" type="button" data-href="#video"> 
+                      <svg class="icon icon-play ">
+                        <use xlink:href="app/img/svg/symbol/sprite.svg#play"></use>
+                      </svg><span>Посмотреть видео</span>
+                    </button>
+                  </div>
+                  <div class="hero__slider">
+                    <button class="hero__slider-arrow prev disabled" type="button" aria-label="Предыдущее курс">
+                      <svg class="icon icon-arrow-left ">
+                        <use xlink:href="app/img/svg/symbol/sprite.svg#arrow-left"></use>
+                      </svg>
+                    </button>
+                    <div class="hero__slider-slider">
+                      <div class="hero__slide">
+                        <div class="hero__slide-wrap">
+                          <div class="hero__slide-info"><span class="hero__slide-title">Ближайший курс</span><span class="hero__slide-subinfo">1 августа 2020, Осталось 20 мест</span></div>
+                          <button class="hero__slide-btn js-payment-scroll" type="button" data-date="01.08.2020">Записаться</button>
+                        </div>
+                      </div>
+                      <div class="hero__slide">
+                        <div class="hero__slide-wrap">
+                          <div class="hero__slide-info"><span class="hero__slide-title">Следующий курс</span><span class="hero__slide-subinfo">1 августа 2020, Осталось 20 мест</span></div>
+                          <button class="hero__slide-btn js-payment-scroll" type="button" data-date="01.09.2020">Записаться</button>
+                        </div>
+                      </div>
+                      <div class="hero__slide">
+                        <div class="hero__slide-wrap">
+                          <div class="hero__slide-info"><span class="hero__slide-title">Послеследующий курс</span><span class="hero__slide-subinfo">1 августа 2020, Осталось 20 мест</span></div>
+                          <button class="hero__slide-btn js-payment-scroll" type="button" data-date="01.10.2020">Записаться</button>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="hero__slider-arrow next" type="button" aria-label="Следующее курс">
+                      <svg class="icon icon-arrow-right ">
+                        <use xlink:href="app/img/svg/symbol/sprite.svg#arrow-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="hero__view">
+                  <div class="hero__view-img"><img src="https://via.placeholder.com/420x540" alt="Егор Попов"></div>
+                  <div class="hero__view-info"><span class="hero__view-name">Егор Попов</span><span class="hero__view-desc">Автор курса</span></div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section-bg about" id="about">
+            <div class="container">
+              <h2 class="title about__title wow fadeIn">Для чего нужна академия?</h2>
+              <p class="subtitle about__subtitle wow fadeIn">После прохождения Академии вы почувствуете, что прошли 2 года предпринимательства за 5 дней и оказались на новом уровне.</p>
+              <div class="about__wrap">
+                <div class="about__info wow slideInLeft">
+                  <div class="about__director">
+                    <div class="about__director-img"><img src="https://via.placeholder.com/140" alt="Линар Хуснуллин"></div>
+                    <div class="about__director-info"><span class="about__director-name">Линар Хуснуллин</span><span class="about__director-desc">Основатель KazanExpress</span></div>
+                  </div>
+                  <p class="about__text">"Для многих начинающих предпринимателей остро стоит вопрос: как мне стать таким же большим как известные бренды? Чтобы ответить на этот вопрос мы придумали Академию KazanExpress. Каждый новый день Академия будет отвечать на вопросы, делая это системно и профессионально."</p>
+                </div>
+                <div class="about__img wow slideInRight"><img src="app/img/content/about.png" srcset="app/img/content/about@2x.png 2x, app/img/content/about@3x.png 3x"></div>
+              </div>
+            </div>
+          </section>
+          <section class="process" id="process">
+            <div class="container">
+              <h2 class="title process__title wow fadeIn">Как проходит обучение</h2>
+              <p class="subtitle process__subtitle wow fadeIn">Пройдя академию, ты точно сможешь ответить на вопросы зачем? что? и как? В&nbsp;результате ты получишь точный алгоритм действий по чек-листу</p>
+              <div class="process__list">
+                <div class="process__item wow slideInDown">
+                  <div class="process__img"><img src="https://via.placeholder.com/80" alt="Обучение в г. Иннополис"></div>
+                  <div class="process__info"><span class="process__name">Обучение в г. Иннополис</span><span class="process__desc">Один из крупнейших IT-парков страны</span></div>
+                </div>
+                <div class="process__item wow slideInDown">
+                  <div class="process__img"><img src="https://via.placeholder.com/80" alt="Предоставляется отель"></div>
+                  <div class="process__info"><span class="process__name">Предоставляется отель</span><span class="process__desc">Со всем необходимым</span></div>
+                </div>
+                <div class="process__item wow slideInDown">
+                  <div class="process__img"><img src="https://via.placeholder.com/80" alt="10 спикеров-экспертов"></div>
+                  <div class="process__info"><span class="process__name">10 спикеров-экспертов</span><span class="process__desc">Действующие предприниматели, основатели KazanExpress</span></div>
+                </div>
+                <div class="process__item wow slideInUp">
+                  <div class="process__img"><img src="https://via.placeholder.com/80" alt="Реальная стоимость курса 60 000 руб."></div>
+                  <div class="process__info"><span class="process__name">Реальная стоимость курса 60 000 руб.</span><span class="process__desc">Остальное платит KazanExpress</span></div>
+                </div>
+                <div class="process__item wow slideInUp">
+                  <div class="process__img"><img src="https://via.placeholder.com/80" alt="Сначала Зачем? Потом что и как?"></div>
+                  <div class="process__info"><span class="process__name">Сначала Зачем? Потом что и как?</span><span class="process__desc">Системный подход</span></div>
+                </div>
+                <div class="process__item wow slideInUp">
+                  <div class="process__img"><img src="https://via.placeholder.com/80" alt="Получишь реальные методики"></div>
+                  <div class="process__info"><span class="process__name">Получишь реальные методики</span><span class="process__desc">Которые можно и нужно внедрять в работе</span></div>
+                </div>
+              </div>
+              <div class="accent accent--elems wow zoomIn">
+                <div class="accent__info">
+                  <p>Это не стандартный онлайн курс на котором зарабатывают, а настоящая академия. </p>
+                </div>
+                <button class="btn btn--white accent__btn" type="button" data-remodal-target="free-lesson">Записаться на бесплатный урок</button>
+              </div>
+            </div>
+          </section>
+          <section class="video" id="video">
+            <div class="video__wrap">
+              <div class="video__video">
+                <video src="app/img/general/videoplayback.mp4" loop></video>
+              </div>
+              <div class="video__info">
+                <div class="video__icon">
+                  <svg class="icon icon-play ">
+                    <use xlink:href="app/img/svg/symbol/sprite.svg#play"></use>
+                  </svg>
+                </div><span class="video__text">Посмотрите видео, чтобы узнать больше</span>
+              </div>
+            </div>
+          </section>
+          <section class="clients" id="clients">
+            <div class="container border-block">
+              <div class="clients__wrap">
+                <div class="clients__info wow slideInLeft">
+                  <h2 class="title clients__title">Для кого этот курс</h2>
+                  <p class="clients__subtitle">80% проблем свзяано с незнанием основ ведения бизнеса. Теперь у вас есть возможность получить эти знания, которые не преподают в школах, техникумах, университетах.</p>
+                </div>
+                <div class="clients__list wow slideInRight">
+                  <div class="clients__item">
+                    <div class="clients__img"><img src="app/img/content/clients-1.jpg" srcset="app/img/content/clients-1@2x.jpg 2x, app/img/content/clients-1@3x.jpg 3x"></div>
+                    <p class="clients__text"><b>Сотрудники по найму</b>, желающие начать свое дело.</p>
+                  </div>
+                  <div class="clients__item">
+                    <div class="clients__img"><img src="app/img/content/clients-2.jpg" srcset="app/img/content/clients-2@2x.jpg 2x, app/img/content/clients-2@3x.jpg 3x"></div>
+                    <p class="clients__text"><b>Начинающие предприниматели</b>, которые хотят повысить свой уровень.</p>
+                  </div>
+                  <div class="clients__item">
+                    <div class="clients__img"><img src="app/img/content/clients-3.jpg" srcset="app/img/content/clients-3@2x.jpg 2x, app/img/content/clients-3@3x.jpg 3x"></div>
+                    <p class="clients__text"><b>Продавцы</b>, которые хотят систематизировать свои знания и применить их в бизнесе</p>
+                  </div>
+                  <div class="clients__item">
+                    <div class="clients__img"><img src="app/img/content/clients-4.jpg" srcset="app/img/content/clients-4@2x.jpg 2x, app/img/content/clients-4@3x.jpg 3x"></div>
+                    <p class="clients__text"><b>Предприниматели</b>, которые хотят увеличить свои доходы.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="program" id="program">
+            <div class="container border-block">
+              <h2 class="title program__title wow fadeIn">Программа курса</h2><span class="program__subtitle wow fadeIn">Спикеры</span>
+              <div class="program__slider">
+                <button class="program__slider-arrow prev" type="button" aria-label="Предыдущее фото">
+                  <svg class="icon icon-circle-arrow-left ">
+                    <use xlink:href="app/img/svg/symbol/sprite.svg#circle-arrow-left"></use>
+                  </svg>
+                </button>
+                <div class="program__slider-slider">
+                  <div class="program__slide">
+                    <div class="program__slide-wrap">
+                      <div class="program__slide-img"><img src="https://via.placeholder.com/363x353" alt="Линар Хуснуллин"></div>
+                      <div class="program__slide-info">
+                        <div class="program__slide-header"><span class="program__slide-name">Линар Хуснуллин</span><span class="program__slide-count"></span></div><span class="program__slide-desc">Основатель KazanExpress</span>
+                        <ol class="program__slide-list">
+                          <li>Основатель самого быстрорастущего маркетплейса</li>
+                          <li>Первый миллион заработал в 25 лет</li>
+                          <li>Основатель самого быстрорастущего маркетплейса</li>
+                        </ol>
+                        <p class="program__slide-text">«Я расскажу вам как нам удалось построить самый быстрорастущий маркеплейс в Европе. Почему скоро мы станем самым крупным маркетплейсом в СНГ. И как вы можете зарабатывать вместе с KazanExpress» </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="program__slide">
+                    <div class="program__slide-wrap">
+                      <div class="program__slide-img"><img src="https://via.placeholder.com/363x353" alt="Линар Хуснуллин"></div>
+                      <div class="program__slide-info">
+                        <div class="program__slide-header"><span class="program__slide-name">Линар Хуснуллин</span><span class="program__slide-count"></span></div><span class="program__slide-desc">Основатель KazanExpress</span>
+                        <ol class="program__slide-list">
+                          <li>Основатель самого быстрорастущего маркетплейса</li>
+                          <li>Первый миллион заработал в 25 лет</li>
+                          <li>Основатель самого быстрорастущего маркетплейса</li>
+                        </ol>
+                        <p class="program__slide-text">«Я расскажу вам как нам удалось построить самый быстрорастущий маркеплейс в Европе. Почему скоро мы станем самым крупным маркетплейсом в СНГ. И как вы можете зарабатывать вместе с KazanExpress» </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="program__slide">
+                    <div class="program__slide-wrap">
+                      <div class="program__slide-img"><img src="https://via.placeholder.com/363x353" alt="Линар Хуснуллин"></div>
+                      <div class="program__slide-info">
+                        <div class="program__slide-header"><span class="program__slide-name">Линар Хуснуллин</span><span class="program__slide-count"></span></div><span class="program__slide-desc">Основатель KazanExpress</span>
+                        <ol class="program__slide-list">
+                          <li>Основатель самого быстрорастущего маркетплейса</li>
+                          <li>Первый миллион заработал в 25 лет</li>
+                          <li>Основатель самого быстрорастущего маркетплейса</li>
+                        </ol>
+                        <p class="program__slide-text">«Я расскажу вам как нам удалось построить самый быстрорастущий маркеплейс в Европе. Почему скоро мы станем самым крупным маркетплейсом в СНГ. И как вы можете зарабатывать вместе с KazanExpress» </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="program__slide">
+                    <div class="program__slide-wrap">
+                      <div class="program__slide-img"><img src="https://via.placeholder.com/363x353" alt="Линар Хуснуллин"></div>
+                      <div class="program__slide-info">
+                        <div class="program__slide-header"><span class="program__slide-name">Линар Хуснуллин</span><span class="program__slide-count"></span></div><span class="program__slide-desc">Основатель KazanExpress</span>
+                        <ol class="program__slide-list">
+                          <li>Основатель самого быстрорастущего маркетплейса</li>
+                          <li>Первый миллион заработал в 25 лет</li>
+                          <li>Основатель самого быстрорастущего маркетплейса</li>
+                        </ol>
+                        <p class="program__slide-text">«Я расскажу вам как нам удалось построить самый быстрорастущий маркеплейс в Европе. Почему скоро мы станем самым крупным маркетплейсом в СНГ. И как вы можете зарабатывать вместе с KazanExpress» </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="program__slide">
+                    <div class="program__slide-wrap">
+                      <div class="program__slide-img"><img src="https://via.placeholder.com/363x353" alt="Линар Хуснуллин"></div>
+                      <div class="program__slide-info">
+                        <div class="program__slide-header"><span class="program__slide-name">Линар Хуснуллин</span><span class="program__slide-count"></span></div><span class="program__slide-desc">Основатель KazanExpress</span>
+                        <ol class="program__slide-list">
+                          <li>Основатель самого быстрорастущего маркетплейса</li>
+                          <li>Первый миллион заработал в 25 лет</li>
+                          <li>Основатель самого быстрорастущего маркетплейса</li>
+                        </ol>
+                        <p class="program__slide-text">«Я расскажу вам как нам удалось построить самый быстрорастущий маркеплейс в Европе. Почему скоро мы станем самым крупным маркетплейсом в СНГ. И как вы можете зарабатывать вместе с KazanExpress» </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="program__slider-arrow next" type="button" aria-label="Следующее фото">
+                  <svg class="icon icon-circle-arrow-right ">
+                    <use xlink:href="app/img/svg/symbol/sprite.svg#circle-arrow-right"></use>
+                  </svg>
+                </button>
+              </div><span class="program__subtitle wow fadeIn">Лекции спикера</span>
+              <div class="program__lectures">
+                <div class="program__lectures-block">
+                  <div class="program__lectures-wrap">
+                    <div class="program__lectures-tabs wow slideInLeft">
+                      <li class="active">Менеджмент в интересах собственника</li>
+                      <li>Как правильно позиционировать свой бренд</li>
+                      <li>Стратегическое планирование</li>
+                      <li>Продвижение и фирменный стиль</li>
+                      <li>Контроль качества коммуникаций</li>
+                    </div>
+                    <div class="program__lectures-contents wow slideInRight">
+                      <div class="program__lectures-content active">
+                        <h3 class="program__lectures-title">Менеджмент в интересах собственника</h3>
+                        <p class="program__lectures-text">Ты погрузишься в маркетплейс KazanExpress, узнаешь вектор развития компаниию. Узнаешь, как работают алгоритмы и какие показатели влияют на выдачу товаров. Поймешь как правильно выстроить основу своего бизнеса, какую юридическую форму выбрать и как раотать с партнерами.</p>
+                      </div>
+                      <div class="program__lectures-content">
+                        <h3 class="program__lectures-title">Как правильно позиционировать свой бренд</h3>
+                        <p class="program__lectures-text">Ты погрузишься в маркетплейс KazanExpress, узнаешь вектор развития компаниию. Узнаешь, как работают алгоритмы и какие показатели влияют на выдачу товаров. Поймешь как правильно выстроить основу своего бизнеса, какую юридическую форму выбрать и как раотать с партнерами.</p>
+                      </div>
+                      <div class="program__lectures-content">
+                        <h3 class="program__lectures-title">Стратегическое планирование</h3>
+                        <p class="program__lectures-text">Ты погрузишься в маркетплейс KazanExpress, узнаешь вектор развития компаниию. Узнаешь, как работают алгоритмы и какие показатели влияют на выдачу товаров. Поймешь как правильно выстроить основу своего бизнеса, какую юридическую форму выбрать и как раотать с партнерами.</p>
+                      </div>
+                      <div class="program__lectures-content">
+                        <h3 class="program__lectures-title">Продвижение и фирменный стиль</h3>
+                        <p class="program__lectures-text">Ты погрузишься в маркетплейс KazanExpress, узнаешь вектор развития компаниию. Узнаешь, как работают алгоритмы и какие показатели влияют на выдачу товаров. Поймешь как правильно выстроить основу своего бизнеса, какую юридическую форму выбрать и как раотать с партнерами.</p>
+                      </div>
+                      <div class="program__lectures-content">
+                        <h3 class="program__lectures-title">Контроль качества коммуникаций</h3>
+                        <p class="program__lectures-text">Ты погрузишься в маркетплейс KazanExpress, узнаешь вектор развития компаниию. Узнаешь, как работают алгоритмы и какие показатели влияют на выдачу товаров. Поймешь как правильно выстроить основу своего бизнеса, какую юридическую форму выбрать и как раотать с партнерами.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="program__lectures-block">
+                  <div class="program__lectures-wrap">
+                    <div class="program__lectures-tabs wow slideInLeft">
+                      <li class="active">Менеджмент в интересах собственника</li>
+                      <li>Как правильно позиционировать свой бренд</li>
+                      <li>Стратегическое планирование</li>
+                      <li>Продвижение и фирменный стиль</li>
+                      <li>Контроль качества коммуникаций</li>
+                    </div>
+                    <div class="program__lectures-contents wow slideInRight">
+                      <div class="program__lectures-content active">
+                        <h3 class="program__lectures-title">Менеджмент в интересах собственника</h3>
+                        <p class="program__lectures-text">Ты погрузишься в маркетплейс KazanExpress, узнаешь вектор развития компаниию. Узнаешь, как работают алгоритмы и какие показатели влияют на выдачу товаров. Поймешь как правильно выстроить основу своего бизнеса, какую юридическую форму выбрать и как раотать с партнерами.</p>
+                      </div>
+                      <div class="program__lectures-content">
+                        <h3 class="program__lectures-title">Как правильно позиционировать свой бренд</h3>
+                        <p class="program__lectures-text">Ты погрузишься в маркетплейс KazanExpress, узнаешь вектор развития компаниию. Узнаешь, как работают алгоритмы и какие показатели влияют на выдачу товаров. Поймешь как правильно выстроить основу своего бизнеса, какую юридическую форму выбрать и как раотать с партнерами.</p>
+                      </div>
+                      <div class="program__lectures-content">
+                        <h3 class="program__lectures-title">Стратегическое планирование</h3>
+                        <p class="program__lectures-text">Ты погрузишься в маркетплейс KazanExpress, узнаешь вектор развития компаниию. Узнаешь, как работают алгоритмы и какие показатели влияют на выдачу товаров. Поймешь как правильно выстроить основу своего бизнеса, какую юридическую форму выбрать и как раотать с партнерами.</p>
+                      </div>
+                      <div class="program__lectures-content">
+                        <h3 class="program__lectures-title">Продвижение и фирменный стиль</h3>
+                        <p class="program__lectures-text">Ты погрузишься в маркетплейс KazanExpress, узнаешь вектор развития компаниию. Узнаешь, как работают алгоритмы и какие показатели влияют на выдачу товаров. Поймешь как правильно выстроить основу своего бизнеса, какую юридическую форму выбрать и как раотать с партнерами.</p>
+                      </div>
+                      <div class="program__lectures-content">
+                        <h3 class="program__lectures-title">Контроль качества коммуникаций</h3>
+                        <p class="program__lectures-text">Ты погрузишься в маркетплейс KazanExpress, узнаешь вектор развития компаниию. Узнаешь, как работают алгоритмы и какие показатели влияют на выдачу товаров. Поймешь как правильно выстроить основу своего бизнеса, какую юридическую форму выбрать и как раотать с партнерами.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="program__lectures-block">
+                  <div class="program__lectures-wrap">
+                    <div class="program__lectures-tabs wow slideInLeft">
+                      <li class="active">Менеджмент в интересах собственника</li>
+                      <li>Как правильно позиционировать свой бренд</li>
+                      <li>Стратегическое планирование</li>
+                      <li>Продвижение и фирменный стиль</li>
+                      <li>Контроль качества коммуникаций</li>
+                    </div>
+                    <div class="program__lectures-contents wow slideInRight">
+                      <div class="program__lectures-content active">
+                        <h3 class="program__lectures-title">Менеджмент в интересах собственника</h3>
+                        <p class="program__lectures-text">Ты погрузишься в маркетплейс KazanExpress, узнаешь вектор развития компаниию. Узнаешь, как работают алгоритмы и какие показатели влияют на выдачу товаров. Поймешь как правильно выстроить основу своего бизнеса, какую юридическую форму выбрать и как раотать с партнерами.</p>
+                      </div>
+                      <div class="program__lectures-content">
+                        <h3 class="program__lectures-title">Как правильно позиционировать свой бренд</h3>
+                        <p class="program__lectures-text">Ты погрузишься в маркетплейс KazanExpress, узнаешь вектор развития компаниию. Узнаешь, как работают алгоритмы и какие показатели влияют на выдачу товаров. Поймешь как правильно выстроить основу своего бизнеса, какую юридическую форму выбрать и как раотать с партнерами.</p>
+                      </div>
+                      <div class="program__lectures-content">
+                        <h3 class="program__lectures-title">Стратегическое планирование</h3>
+                        <p class="program__lectures-text">Ты погрузишься в маркетплейс KazanExpress, узнаешь вектор развития компаниию. Узнаешь, как работают алгоритмы и какие показатели влияют на выдачу товаров. Поймешь как правильно выстроить основу своего бизнеса, какую юридическую форму выбрать и как раотать с партнерами.</p>
+                      </div>
+                      <div class="program__lectures-content">
+                        <h3 class="program__lectures-title">Продвижение и фирменный стиль</h3>
+                        <p class="program__lectures-text">Ты погрузишься в маркетплейс KazanExpress, узнаешь вектор развития компаниию. Узнаешь, как работают алгоритмы и какие показатели влияют на выдачу товаров. Поймешь как правильно выстроить основу своего бизнеса, какую юридическую форму выбрать и как раотать с партнерами.</p>
+                      </div>
+                      <div class="program__lectures-content">
+                        <h3 class="program__lectures-title">Контроль качества коммуникаций</h3>
+                        <p class="program__lectures-text">Ты погрузишься в маркетплейс KazanExpress, узнаешь вектор развития компаниию. Узнаешь, как работают алгоритмы и какие показатели влияют на выдачу товаров. Поймешь как правильно выстроить основу своего бизнеса, какую юридическую форму выбрать и как раотать с партнерами.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="program__lectures-block">
+                  <div class="program__lectures-wrap">
+                    <div class="program__lectures-tabs wow slideInLeft">
+                      <li class="active">Менеджмент в интересах собственника</li>
+                      <li>Как правильно позиционировать свой бренд</li>
+                      <li>Стратегическое планирование</li>
+                      <li>Продвижение и фирменный стиль</li>
+                      <li>Контроль качества коммуникаций</li>
+                    </div>
+                    <div class="program__lectures-contents wow slideInRight">
+                      <div class="program__lectures-content active">
+                        <h3 class="program__lectures-title">Менеджмент в интересах собственника</h3>
+                        <p class="program__lectures-text">Ты погрузишься в маркетплейс KazanExpress, узнаешь вектор развития компаниию. Узнаешь, как работают алгоритмы и какие показатели влияют на выдачу товаров. Поймешь как правильно выстроить основу своего бизнеса, какую юридическую форму выбрать и как раотать с партнерами.</p>
+                      </div>
+                      <div class="program__lectures-content">
+                        <h3 class="program__lectures-title">Как правильно позиционировать свой бренд</h3>
+                        <p class="program__lectures-text">Ты погрузишься в маркетплейс KazanExpress, узнаешь вектор развития компаниию. Узнаешь, как работают алгоритмы и какие показатели влияют на выдачу товаров. Поймешь как правильно выстроить основу своего бизнеса, какую юридическую форму выбрать и как раотать с партнерами.</p>
+                      </div>
+                      <div class="program__lectures-content">
+                        <h3 class="program__lectures-title">Стратегическое планирование</h3>
+                        <p class="program__lectures-text">Ты погрузишься в маркетплейс KazanExpress, узнаешь вектор развития компаниию. Узнаешь, как работают алгоритмы и какие показатели влияют на выдачу товаров. Поймешь как правильно выстроить основу своего бизнеса, какую юридическую форму выбрать и как раотать с партнерами.</p>
+                      </div>
+                      <div class="program__lectures-content">
+                        <h3 class="program__lectures-title">Продвижение и фирменный стиль</h3>
+                        <p class="program__lectures-text">Ты погрузишься в маркетплейс KazanExpress, узнаешь вектор развития компаниию. Узнаешь, как работают алгоритмы и какие показатели влияют на выдачу товаров. Поймешь как правильно выстроить основу своего бизнеса, какую юридическую форму выбрать и как раотать с партнерами.</p>
+                      </div>
+                      <div class="program__lectures-content">
+                        <h3 class="program__lectures-title">Контроль качества коммуникаций</h3>
+                        <p class="program__lectures-text">Ты погрузишься в маркетплейс KazanExpress, узнаешь вектор развития компаниию. Узнаешь, как работают алгоритмы и какие показатели влияют на выдачу товаров. Поймешь как правильно выстроить основу своего бизнеса, какую юридическую форму выбрать и как раотать с партнерами.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="program__lectures-block">
+                  <div class="program__lectures-wrap">
+                    <div class="program__lectures-tabs wow slideInLeft">
+                      <li class="active">Менеджмент в интересах собственника</li>
+                      <li>Как правильно позиционировать свой бренд</li>
+                      <li>Стратегическое планирование</li>
+                      <li>Продвижение и фирменный стиль</li>
+                      <li>Контроль качества коммуникаций</li>
+                    </div>
+                    <div class="program__lectures-contents wow slideInRight">
+                      <div class="program__lectures-content active">
+                        <h3 class="program__lectures-title">Менеджмент в интересах собственника</h3>
+                        <p class="program__lectures-text">Ты погрузишься в маркетплейс KazanExpress, узнаешь вектор развития компаниию. Узнаешь, как работают алгоритмы и какие показатели влияют на выдачу товаров. Поймешь как правильно выстроить основу своего бизнеса, какую юридическую форму выбрать и как раотать с партнерами.</p>
+                      </div>
+                      <div class="program__lectures-content">
+                        <h3 class="program__lectures-title">Как правильно позиционировать свой бренд</h3>
+                        <p class="program__lectures-text">Ты погрузишься в маркетплейс KazanExpress, узнаешь вектор развития компаниию. Узнаешь, как работают алгоритмы и какие показатели влияют на выдачу товаров. Поймешь как правильно выстроить основу своего бизнеса, какую юридическую форму выбрать и как раотать с партнерами.</p>
+                      </div>
+                      <div class="program__lectures-content">
+                        <h3 class="program__lectures-title">Стратегическое планирование</h3>
+                        <p class="program__lectures-text">Ты погрузишься в маркетплейс KazanExpress, узнаешь вектор развития компаниию. Узнаешь, как работают алгоритмы и какие показатели влияют на выдачу товаров. Поймешь как правильно выстроить основу своего бизнеса, какую юридическую форму выбрать и как раотать с партнерами.</p>
+                      </div>
+                      <div class="program__lectures-content">
+                        <h3 class="program__lectures-title">Продвижение и фирменный стиль</h3>
+                        <p class="program__lectures-text">Ты погрузишься в маркетплейс KazanExpress, узнаешь вектор развития компаниию. Узнаешь, как работают алгоритмы и какие показатели влияют на выдачу товаров. Поймешь как правильно выстроить основу своего бизнеса, какую юридическую форму выбрать и как раотать с партнерами.</p>
+                      </div>
+                      <div class="program__lectures-content">
+                        <h3 class="program__lectures-title">Контроль качества коммуникаций</h3>
+                        <p class="program__lectures-text">Ты погрузишься в маркетплейс KazanExpress, узнаешь вектор развития компаниию. Узнаешь, как работают алгоритмы и какие показатели влияют на выдачу товаров. Поймешь как правильно выстроить основу своего бизнеса, какую юридическую форму выбрать и как раотать с партнерами.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accent wow zoomIn">
+                <div class="accent__info">
+                  <p>Ближайший курс</p><span>1 августа 2020, Осталось 20 мест</span>
+                </div>
+                <button class="btn btn--white accent__btn" type="button" data-remodal-target="free-lesson">Записаться на бесплатный урок</button>
+              </div>
+            </div>
+          </section>
+          <section class="advantages" id="advantages">
+            <div class="container">
+              <h2 class="title advantages__title wow fadeIn">Что ты получишь по окончании курса</h2>
+              <div class="advantages__list">
+                <div class="advantages__item wow slideInUp"><span class="advantages__num">>60</span>
+                  <p class="advantages__text">Дней будут заряжены новыми идеями и инсайтами</p>
+                </div>
+                <div class="advantages__item wow slideInUp"><span class="advantages__num">19</span>
+                  <p class="advantages__text">Управленческих методик и техник будут изучены</p>
+                </div>
+                <div class="advantages__item wow slideInUp"><span class="advantages__num">13</span>
+                  <p class="advantages__text">Типичных ошибок руководителя будут обработаны</p>
+                </div>
+                <div class="advantages__item wow slideInDown"><span class="advantages__num">27</span>
+                  <p class="advantages__text">Проблемных ситуаций будут разобраны в коллективе</p>
+                </div>
+                <div class="advantages__item wow slideInDown"><span class="advantages__num">на 100</span>
+                  <p class="advantages__text">Процентов преодолеешь профессиональное выгорание</p>
+                </div>
+                <div class="advantages__item wow slideInDown"><span class="advantages__num">>12</span>
+                  <p class="advantages__text">Инструментов будут внедрены в работу</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="faq section-bg" id="faq">
+            <div class="container">
+              <h2 class="title faq__title wow fadeIn">Часто задаваемые вопросы</h2>
+              <div class="faq__list">
+                <div class="faq__item wow slideInLeft">
+                  <h3 class="faq__item-title">Для продавцов каких категорий подходит этот курс?</h3>
+                  <div class="faq__content">
+                    <p>Here, I focus on a range of items and features that we use in life without giving them a second thought such as Coca Cola, body muscles and holding ones own breath. Though, most of these notes are not fundamentally necessary, they are such that you can use them for a good laugh, at a drinks party or for picking up women or men.</p>
+                    <p>1) Coca-Cola: Did you know that its original colour was green?</p>
+                    <p>Для продавцов каких категорий подходит этот курс?</p>
+                  </div>
+                </div>
+                <div class="faq__item wow slideInRight">
+                  <h3 class="faq__item-title">Когда можно начать обучение?</h3>
+                  <div class="faq__content">
+                    <p>Here, I focus on a range of items and features that we use in life without giving them a second thought such as Coca Cola, body muscles and holding ones own breath. Though, most of these notes are not fundamentally necessary, they are such that you can use them for a good laugh, at a drinks party or for picking up women or men.</p>
+                    <p>1) Coca-Cola: Did you know that its original colour was green?</p>
+                    <p>Когда можно начать обучение?</p>
+                  </div>
+                </div>
+                <div class="faq__item wow slideInLeft">
+                  <h3 class="faq__item-title">Сколько длится обучение на курсе?</h3>
+                  <div class="faq__content">
+                    <p>Here, I focus on a range of items and features that we use in life without giving them a second thought such as Coca Cola, body muscles and holding ones own breath. Though, most of these notes are not fundamentally necessary, they are such that you can use them for a good laugh, at a drinks party or for picking up women or men.</p>
+                    <p>1) Coca-Cola: Did you know that its original colour was green?</p>
+                    <p>Сколько длится обучение на курсе?</p>
+                  </div>
+                </div>
+                <div class="faq__item wow slideInRight">
+                  <h3 class="faq__item-title">Для продавцов каких категорий подходит этот курс?</h3>
+                  <div class="faq__content">
+                    <p>Here, I focus on a range of items and features that we use in life without giving them a second thought such as Coca Cola, body muscles and holding ones own breath. Though, most of these notes are not fundamentally necessary, they are such that you can use them for a good laugh, at a drinks party or for picking up women or men.</p>
+                    <p>1) Coca-Cola: Did you know that its original colour was green?</p>
+                    <p>Для продавцов каких категорий подходит этот курс?</p>
+                  </div>
+                </div>
+                <div class="faq__item wow slideInLeft">
+                  <h3 class="faq__item-title">Сколько длится обучение на курсе?</h3>
+                  <div class="faq__content">
+                    <p>Here, I focus on a range of items and features that we use in life without giving them a second thought such as Coca Cola, body muscles and holding ones own breath. Though, most of these notes are not fundamentally necessary, they are such that you can use them for a good laugh, at a drinks party or for picking up women or men.</p>
+                    <p>1) Coca-Cola: Did you know that its original colour was green?</p>
+                    <p>Сколько длится обучение на курсе?</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="reviews" id="reviews">
+            <div class="container border-block">
+              <h2 class="title reviews__title wow fadeIn">Отзывы продавцов</h2>
+              <div class="reviews__list">
+                <div class="reviews__item wow slideInDown">
+                  <p class="reviews__text">« There’s a new hairstyle that seems to be sweeping Hollywood: what would you be willing to do to get it for yourself? How pleased would you be if getting the latest, hottest hair look were as simple as changing the styling products that you use?»</p>
+                  <div class="reviews__author">
+                    <div class="reviews__author-img"><img src="https://via.placeholder.com/56" alt=""></div>
+                    <div class="reviews__author-info"><span class="reviews__author-name">Мария Алексеевна</span><span class="reviews__author-desc">Магазин «Good Store», более 50 000 заказов</span></div>
+                  </div>
+                </div>
+                <div class="reviews__item wow slideInDown">
+                  <p class="reviews__text">« There’s a new hairstyle that seems to be sweeping Hollywood: what would you be willing to do to get it for yourself? How pleased would you be if getting the latest, hottest hair look were as simple as changing the styling products that you use?»</p>
+                  <div class="reviews__author">
+                    <div class="reviews__author-img"><img src="https://via.placeholder.com/56" alt=""></div>
+                    <div class="reviews__author-info"><span class="reviews__author-name">Мария Алексеевна</span><span class="reviews__author-desc">Магазин «Good Store», более 50 000 заказов</span></div>
+                  </div>
+                </div>
+                <div class="reviews__item wow slideInUp">
+                  <p class="reviews__text">« There’s a new hairstyle that seems to be sweeping Hollywood: what would you be willing to do to get it for yourself? How pleased would you be if getting the latest, hottest hair look were as simple as changing the styling products that you use?»</p>
+                  <div class="reviews__author">
+                    <div class="reviews__author-img"><img src="https://via.placeholder.com/56" alt=""></div>
+                    <div class="reviews__author-info"><span class="reviews__author-name">Мария Алексеевна</span><span class="reviews__author-desc">Магазин «Good Store», более 50 000 заказов</span></div>
+                  </div>
+                </div>
+                <div class="reviews__item wow slideInUp">
+                  <p class="reviews__text">« There’s a new hairstyle that seems to be sweeping Hollywood: what would you be willing to do to get it for yourself? How pleased would you be if getting the latest, hottest hair look were as simple as changing the styling products that you use?»</p>
+                  <div class="reviews__author">
+                    <div class="reviews__author-img"><img src="https://via.placeholder.com/56" alt=""></div>
+                    <div class="reviews__author-info"><span class="reviews__author-name">Мария Алексеевна</span><span class="reviews__author-desc">Магазин «Good Store», более 50 000 заказов</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="payment" id="payment">
+            <div class="container">
+              <h2 class="title payment__title wow fadeIn">Стоимость курса</h2>
+              <div class="payment__block">
+                <div class="payment__info wow slideInLeft"><span class="payment__subtitle">Доступ к курсу</span>
+                  <ul class="payment__list">
+                    <li class="payment__item">Продолжительность курса 5 дней</li>
+                    <li class="payment__item">Методические материалы</li>
+                    <li class="payment__item">Закрытый чат участников</li>
+                    <li class="payment__item">Предоставляется отель</li>
+                  </ul>
+                  <p class="payment__price"><span class="title">28 800 Руб.</span><span class="payment__price-old">60 000 Руб.</span></p><span class="payment__desc">Остальное платит KazanExpress</span>
+                </div>
+                <div class="payment__form wow slideInRight"><span class="payment__subtitle">оплата</span>
+                  <form class="payment__form-form" data-validation>
+                    <div class="payment__form-group payment__form-select" data-placeholder="Выберите дату начала курса">
+                      <div class="payment__form-icon">
+                        <svg class="icon icon-date ">
+                          <use xlink:href="app/img/svg/symbol/sprite.svg#date"></use>
+                        </svg>
+                      </div>
+                      <div class="payment__form-select-arrow">
+                        <svg class="icon icon-arrow-down ">
+                          <use xlink:href="app/img/svg/symbol/sprite.svg#arrow-down"></use>
+                        </svg>
+                      </div><span class="payment__form-select-active">Выберите дату начала курса</span>
+                      <div class="payment__form-select-list">
+                        <button class="payment__form-select-item" type="button">01.08.2020</button>
+                        <button class="payment__form-select-item" type="button">01.09.2020</button>
+                        <button class="payment__form-select-item" type="button">01.10.2020</button>
+                      </div>
+                    </div>
+                    <div class="payment__form-group">
+                      <div class="payment__form-icon">
+                        <svg class="icon icon-email ">
+                          <use xlink:href="app/img/svg/symbol/sprite.svg#email"></use>
+                        </svg>
+                      </div>
+                      <input class="payment__form-input" type="text" placeholder="Email" data-name="email">
+                    </div>
+                    <div class="payment__form-group">
+                      <div class="payment__form-icon">
+                        <svg class="icon icon-phone ">
+                          <use xlink:href="app/img/svg/symbol/sprite.svg#phone"></use>
+                        </svg>
+                      </div>
+                      <input class="payment__form-input" type="text" placeholder="Телефон" data-phone data-name="phone">
+                    </div>
+                    <button class="btn payment__form-btn" type="submit">Отправить</button>
+                    <div class="payment__form-check">
+                      <input type="checkbox" checked id="checkbox">
+                      <label for="checkbox">Согласен с условиями <a href="privacy.html">Политики конфиденциальности</a></label>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="modal remodal" data-remodal-id="free-lesson">
+            <button class="modal__close" data-remodal-action="close" aria-label="Закрыть модальное окно">
+              <svg class="icon icon-close ">
+                <use xlink:href="app/img/svg/symbol/sprite.svg#close"></use>
+              </svg>
+            </button>
+            <div class="modal__wrap">
+              <h4 class="modal__title">Записаться на бесплатный урок</h4>
+              <form class="payment__form-form" data-validation>
+                <div class="payment__form-group">
+                  <div class="payment__form-icon">
+                    <svg class="icon icon-user ">
+                      <use xlink:href="app/img/svg/symbol/sprite.svg#user"></use>
+                    </svg>
+                  </div>
+                  <input class="payment__form-input" type="text" placeholder="Имя" data-name="name">
+                </div>
+                <div class="payment__form-group">
+                  <div class="payment__form-icon">
+                    <svg class="icon icon-email ">
+                      <use xlink:href="app/img/svg/symbol/sprite.svg#email"></use>
+                    </svg>
+                  </div>
+                  <input class="payment__form-input" type="text" placeholder="Email" data-name="email">
+                </div>
+                <div class="payment__form-group">
+                  <div class="payment__form-icon">
+                    <svg class="icon icon-phone ">
+                      <use xlink:href="app/img/svg/symbol/sprite.svg#phone"></use>
+                    </svg>
+                  </div>
+                  <input class="payment__form-input" type="text" placeholder="Телефон" data-phone data-name="phone">
+                </div>
+                <button class="btn payment__form-btn" type="submit">Отправить</button>
+                <div class="payment__form-check">
+                  <input type="checkbox" checked id="checkbox">
+                  <label for="checkbox">Согласен с условиями <a href="privacy.html">Политики конфиденциальности</a></label>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal remodal" data-remodal-id="free-lesson-success">
+            <button class="modal__close" type="button" data-remodal-action="close" aria-label="Закрыть модальное окно">
+              <svg class="icon icon-close ">
+                <use xlink:href="app/img/svg/symbol/sprite.svg#close"></use>
+              </svg>
+            </button>
+            <div class="modal__wrap">
+              <div class="modal__icon">
+                <svg class="icon icon-success ">
+                  <use xlink:href="app/img/svg/symbol/sprite.svg#success"></use>
+                </svg>
+              </div>
+              <h4 class="modal__title">Вы успешно записались на бесплатный урок</h4>
+              <p class="modal__text">Мы отправили уведомление с подробностями на указанные вами email.</p>
+              <button class="btn modal__btn" type="button" data-remodal-action="close">Продолжить</button>
+            </div>
+          </div>
+          <div class="modal remodal" data-remodal-id="success">
+            <button class="modal__close" data-remodal-action="close" aria-label="Закрыть модальное окно">
+              <svg class="icon icon-close ">
+                <use xlink:href="app/img/svg/symbol/sprite.svg#close"></use>
+              </svg>
+            </button>
+            <div class="modal__wrap">
+              <div class="modal__icon">
+                <svg class="icon icon-success ">
+                  <use xlink:href="app/img/svg/symbol/sprite.svg#success"></use>
+                </svg>
+              </div>
+              <h4 class="modal__title">Успешно</h4>
+              <p class="modal__text">Мы отправили уведомление с подробностями на указанные вами email.</p>
+              <p class="modal__success"><span class="modal__success-desc">Стоимость</span>28 800 Руб.</p>
+              <p class="modal__success"><span class="modal__success-desc">Дата и время</span>21 июль 2020, 18:00</p>
+              <button class="btn modal__btn" type="button" data-remodal-action="close">Продолжить</button>
+            </div>
+          </div>
+          <div class="modal remodal" data-remodal-id="error">
+            <button class="modal__close" type="button" data-remodal-action="close" aria-label="Закрыть модальное окно">
+              <svg class="icon icon-close ">
+                <use xlink:href="app/img/svg/symbol/sprite.svg#close"></use>
+              </svg>
+            </button>
+            <div class="modal__wrap">
+              <div class="modal__icon modal__icon--error">
+                <svg class="icon icon-error ">
+                  <use xlink:href="app/img/svg/symbol/sprite.svg#error"></use>
+                </svg>
+              </div>
+              <h4 class="modal__title">Оплата не прошла</h4>
+              <p class="modal__text">Что-то пошло не так. Пожалуйста, повторите попытку.</p>
+              <button class="btn modal__btn" type="button" data-remodal-action="close">Продолжить</button>
+            </div>
+          </div>
+        </div>
+        <footer class="footer section-bg">
+          <div class="container"><a class="footer__logo" href="/">
+              <div class="footer__logo-img"><img src="app/img/general/logo.svg" alt="KazanExpress"></div><span class="footer__logo-sub">Академия</span></a>
+            <div class="footer__main">
+              <div class="footer__menu">
+                <nav class="menu">
+                  <button class="menu__item js-scroll-to" href="#" data-href="#about">О курсе</button>
+                  <button class="menu__item js-scroll-to" href="#" data-href="#clients">Для кого курс?</button>
+                  <button class="menu__item js-scroll-to" href="#" data-href="#program">Программа</button>
+                  <button class="menu__item js-scroll-to" href="#" data-href="#reviews">Отзывы</button>
+                  <button class="menu__item js-scroll-to" href="#" data-href="#payment">Стоимость</button>
+                </nav>
+              </div>
+              <div class="footer__links"><a class="footer__link" href="#" aria-label="instagram">
+                  <svg class="icon icon-inst ">
+                    <use xlink:href="app/img/svg/symbol/sprite.svg#inst"></use>
+                  </svg></a><a class="footer__link" href="#" aria-label="telegram"><img src="app/img/general/tg.svg" alt="telegram icon"></a></div>
+            </div>
+            <div class="footer__bottom">
+              <p>ООО «Компания» 2020. Все права защищены</p><a href="privacy.html">Политика конфиденциальности</a>
+            </div>
+          </div>
+        </footer>
       </div>
       <script src="app/js/libs.min.js"></script>
-      <script src="app/js/main.js"></script>
+      <script src="app/js/app.js"></script>
     </body>
   </head>
 </html>

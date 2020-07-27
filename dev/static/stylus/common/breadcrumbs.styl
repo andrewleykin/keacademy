@@ -1,0 +1,24 @@
+.breadcrumbs
+  display flex
+  font-family Ubuntu
+  font-size 14px
+  line-height 1.71
+  color $black-54
+  margin-bottom 16px
+
+.breadcrumbs__item
+  display flex
+  &:after
+    content '/'
+    margin-left 5px
+    color $black-24
+  &:last-child
+    &:after
+      display none
+  &+&
+    margin-left 5px
+
+.breadcrumbs__link
+  color $black-24
+  &:hover
+    color $black-54

@@ -1,0 +1,56 @@
+.process
+  overflow hidden
+
+.process__title
+  margin-bottom 24px
+
+.process__subtitle
+  max-width 872px
+  margin-bottom 64px
+  @media (max-width $breakpoint-lg)
+    margin-bottom 48px
+
+.process__list
+  display flex
+  justify-content space-between
+  flex-wrap wrap
+  margin-bottom -10px
+  @media (max-width $breakpoint-lg)
+    margin-bottom 20px
+  @media (max-width $breakpoint-sm)
+    margin-bottom 40px
+
+.process__item
+  width 100%
+  max-width 33%
+  margin-bottom 74px
+  @media (max-width $breakpoint-lg)
+    max-width 30%
+    margin-bottom 40px
+  @media (max-width $breakpoint-md)
+    max-width 45%
+  @media (max-width $breakpoint-sm)
+    max-width 100%
+    display flex
+    margin-bottom 0
+    &+&
+      margin-top 20px
+
+.process__img
+  max-width 80px
+  border-radius 12px
+  overflow hidden
+  margin-bottom 24px
+  @media (max-width $breakpoint-sm)
+    flex none
+    margin-right 15px
+
+.process__name
+  font-size 18px
+  font-weight 500
+  line-height 1.44
+  display block
+  margin-bottom 4px
+
+.process__desc
+  color $black-54

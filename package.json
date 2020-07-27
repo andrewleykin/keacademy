@@ -4,6 +4,7 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
+    "dev": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Лейкин Андрей Романович",
@@ -39,6 +40,7 @@
     "font-awesome": "^4.7.0",
     "gulp-concat-css": "^2.3.0",
     "jquery": "^3.2.1",
+    "jquery-mask-plugin": "^1.14.16",
     "node-sass": "^4.7.2",
     "normalize.css": "^7.0.0",
     "remodal": "^1.1.1",

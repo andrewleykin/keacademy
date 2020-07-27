@@ -1,0 +1,172 @@
+.program__title
+  margin-bottom 30px
+  @media (max-width $breakpoint-md)
+    margin-bottom 24px
+
+.program__subtitle
+  font-size 20px
+  font-weight 500
+  line-height 1.5
+  letter-spacing 0.83px
+  color $black-54
+  display block
+  text-transform uppercase
+  margin-bottom 40px
+  @media (max-width $breakpoint-md)
+    font-size 16px
+    margin-bottom 24px
+
+.program__slider
+  display flex
+  align-items center
+  justify-content space-between
+  margin-bottom 50px
+  @media (max-width $breakpoint-md)
+    margin-bottom 48px
+
+.program__slider-arrow
+  cursor pointer
+  background-color transparent
+  .icon
+    width 56px
+    height 56px
+  &:hover
+    .icon
+      opacity 0.8
+  @media (max-width $breakpoint-md)
+    .icon
+      width 24px
+      height 24px
+
+.program__slider-slider
+  max-width 78%
+  margin 0 10px
+
+.program__slide-wrap
+  border-radius 16px
+  border solid 1px $black-10
+  display flex
+  @media (max-width $breakpoint-lg)
+    border none
+    display block
+
+.program__slide-img
+  width 100%
+  max-width 363px
+  border-top-left-radius 12px
+  border-bottom-left-radius 12px
+  overflow hidden
+  display flex
+  align-items center
+  @media (max-width $breakpoint-lg)
+    border-radius 12px
+    margin-bottom 24px
+  @media (max-width $breakpoint-md)
+    max-width 180px
+
+.program__slide-info
+  padding 32px 42px
+  @media (max-width $breakpoint-lg)
+    padding 0
+
+.program__slide-header
+  margin-bottom 8px
+  display flex
+  align-items center
+  justify-content space-between
+
+.program__slide-name
+  font-size 24px
+  font-weight 500
+  line-height 1.33
+
+.program__slide-count
+  font-size 24px
+  font-weight 500
+  line-height 1.33
+  color $tomato
+
+.program__slide-desc
+  line-height 1.5
+  color $black-54
+  display block
+  margin-bottom 14px
+
+.program__slide-list
+  line-height 1.75
+  margin-bottom 20px
+  list-style counter-increment 
+  li
+    list-style-type decimal
+    list-style-position inside
+
+.program__slide-text
+  font-size 14px
+  line-height 1.57
+  color $black-54
+
+.program__lectures
+  margin-bottom 54px
+  @media (max-width $breakpoint-md)
+    margin-bottom 24px
+
+.program__lectures-wrap
+  display flex
+  justify-content space-between
+  @media (max-width $breakpoint-md)
+    display block
+
+.program__lectures-tabs
+  width 100%
+  max-width 50%
+  margin-right 10px
+  counter-reset item
+  li
+    color $black-38
+    font-size 20px
+    font-weight 500
+    line-height 1.4
+    display flex
+    cursor pointer
+    &.active
+      color $tomato
+    &:before
+      content counter(item, decimal-leading-zero) " "
+      counter-increment item
+      margin-right 40px
+  li + li
+    margin-top 20px
+  @media (max-width $breakpoint-md)
+    max-width 100%
+    padding-bottom 20px
+    li
+      font-size 16px
+      &:before
+        margin-right 10px
+    li + li
+      margin-top 10px
+  @media (max-width $breakpoint-sm)
+    li
+      font-size 14px
+
+.program__lectures-contents
+  max-width 520px
+
+.program__lectures-content
+  display none
+  &.active
+    display block
+
+.program__lectures-title
+  font-size 24px
+  font-weight 500
+  line-height 1.33
+  margin-bottom 15px
+  @media (max-width $breakpoint-md)
+    font-size 18px
+
+.program__lectures-text
+  font-size 18px
+  line-height 1.56
+  @media (max-width $breakpoint-md)
+    font-size 14px

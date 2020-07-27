@@ -1,0 +1,50 @@
+.header
+  padding 19px 0
+
+.header__wrap
+  display flex
+  align-items center
+  justify-content space-between
+  @media (max-width $breakpoint-lg)
+    flex-wrap wrap
+
+.header__logo
+  flex none
+  @media (max-width $breakpoint-sm)
+    max-width 150px
+
+.header__menu
+  @media (max-width $breakpoint-lg)
+    order 2
+  @media (max-width $breakpoint-md)
+    margin-top 10px
+  @media (max-width $breakpoint-sm)
+    width 100%
+
+.header__actions
+  display flex
+  & > * + *
+    margin-left 8px
+
+.header__tg
+  width 42px
+  height 42px
+  border-radius 10px
+  background-color #29b6f6
+  display flex
+  align-items center
+  justify-content center
+  @media (max-width $breakpoint-sm)
+    display none
+
+.header__payment
+  min-width 122px
+  height 42px
+  display flex
+  align-items center
+  justify-content center
+  border-radius 10px
+  background-color $tomato
+  color white
+  img
+    margin-right 10px

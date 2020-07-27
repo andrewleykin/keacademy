@@ -1,0 +1,9 @@
+.modal.remodal(data-remodal-id="error")
+  button.modal__close(type="button" data-remodal-action="close" aria-label="Закрыть модальное окно")
+    +icon('close')
+  .modal__wrap
+    .modal__icon.modal__icon--error
+      +icon('error')
+    h4.modal__title Оплата не прошла
+    p.modal__text Что-то пошло не так. Пожалуйста, повторите попытку.
+    button.btn.modal__btn(type="button" data-remodal-action="close") Продолжить

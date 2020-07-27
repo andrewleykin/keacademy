@@ -1,0 +1,13 @@
+.payment__form-group
+  .payment__form-icon
+    +icon('email')
+  input.payment__form-input(type="text" placeholder="Email" data-name="email")
+.payment__form-group
+  .payment__form-icon
+    +icon('phone')
+  input.payment__form-input(type="text" placeholder="Телефон" data-phone data-name="phone")
+button.btn.payment__form-btn(type="submit") Отправить
+.payment__form-check
+  input(type="checkbox" checked id="checkbox")
+  label(for="checkbox") Согласен с условиями 
+    a(href="privacy.html") Политики конфиденциальности

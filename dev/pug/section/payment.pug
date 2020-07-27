@@ -1,0 +1,29 @@
+section.payment#payment
+  .container
+    h2.title.payment__title.wow.fadeIn Стоимость курса
+    .payment__block
+      .payment__info.wow.slideInLeft
+        span.payment__subtitle Доступ к курсу
+        ul.payment__list
+          li.payment__item Продолжительность курса 5 дней
+          li.payment__item Методические материалы
+          li.payment__item Закрытый чат участников
+          li.payment__item Предоставляется отель
+        p.payment__price
+          span.title 28 800 Руб.
+          span.payment__price-old 60 000 Руб.
+        span.payment__desc Остальное платит KazanExpress
+      .payment__form.wow.slideInRight
+        span.payment__subtitle оплата
+        form.payment__form-form(data-validation)
+          .payment__form-group.payment__form-select(data-placeholder="Выберите дату начала курса")
+            .payment__form-icon
+              +icon('date')
+            .payment__form-select-arrow
+              +icon('arrow-down')
+            span.payment__form-select-active Выберите дату начала курса
+            .payment__form-select-list
+              button.payment__form-select-item(type="button") 01.08.2020
+              button.payment__form-select-item(type="button") 01.09.2020
+              button.payment__form-select-item(type="button") 01.10.2020
+          include ../modules/base-form

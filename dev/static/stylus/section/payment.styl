@@ -1,0 +1,246 @@
+.payment__title
+  margin-bottom 56px
+  @media (max-width $breakpoint-md)
+    margin-bottom 24px
+
+.payment__block
+  border-radius 16px
+  box-shadow 0 -4px 40px 0 $black-10
+  padding 36px
+  display flex
+  position relative
+  &:after
+    content ''
+    display block
+    width 1px
+    height 100%
+    background-color $black-10
+    position absolute
+    left 50%
+    top 0
+    transform translateX(-50%)
+  @media (max-width $breakpoint-md)
+    padding 24px
+    display block
+    &:after
+      display none
+
+.payment__info
+  max-width 50%
+  width 100%
+  @media (max-width $breakpoint-md)
+    max-width 100%
+    margin-bottom 24px
+
+.payment__subtitle
+  @extend .program__subtitle
+  margin-bottom 30px
+  @media (max-width $breakpoint-md)
+    margin-bottom 20px
+
+.payment__list
+  margin-bottom 44px
+  @media (max-width $breakpoint-md)
+    margin-bottom 24px
+
+.payment__item
+  font-size 18px
+  line-height 1.56
+  display flex
+  align-items center
+  &+&
+    margin-top 14px
+  &:before
+    content ''
+    display block
+    background url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%2300E0B2' fill-rule='nonzero' d='M19.495 5c-.26.008-.506.117-.688.303L8.515 15.596l-3.293-3.293c-.251-.261-.624-.366-.974-.275-.35.091-.624.365-.716.716-.091.35.014.722.275.973l4 4c.391.39 1.024.39 1.415 0l11-11c.295-.287.384-.727.223-1.107-.16-.38-.538-.622-.95-.61z'/%3E%3C/svg%3E") center no-repeat
+    width 24px
+    height 24px
+    margin-right 24px
+  @media (max-width $breakpoint-md)
+    font-size 16px
+
+.payment__price
+  margin-bottom 8px
+  display flex
+  align-items flex-end
+  @media (max-width $breakpoint-lg)
+    align-items baseline
+
+.payment__price-old
+  font-size 30px
+  font-weight 500
+  line-height 1.33
+  color $black-24
+  margin-left 12px
+  position relative
+  &:after
+    content ''
+    display block
+    width 100%
+    height 2px
+    background-color #c2c2c2
+    position absolute
+    top 50%
+    left 0
+    transform translateY(-50%)
+  @media (max-width $breakpoint-lg)
+    font-size 22px
+  @media (max-width $breakpoint-sm)
+    font-size 16px
+
+.payment__desc
+  font-size 20px
+  line-height 1.5
+  color $black-38
+  @media (max-width $breakpoint-lg)
+    font-size 16px
+
+.payment__form
+  width 100%
+  padding-left 36px
+  @media (max-width $breakpoint-md)
+    padding-left 0
+
+.payment__form-group
+  border-radius 8px
+  background-color #ffffff
+  position relative
+  min-height 56px
+  &+&
+    margin-top 8px
+  &.invalid
+    .payment__form-input,
+    .payment__form-select-active
+      border-color $tomato
+
+.payment__form-icon
+  position absolute
+  top 16px
+  left 16px
+  .icon
+    width 24px
+    height 24px
+  @media (max-width $breakpoint-sm)
+    left 8px
+    .icon
+      width 16px
+      height 16px
+
+.payment__form-input
+  display block
+  width 100%
+  height 56px
+  padding 0 20px 0 56px
+  border-radius 8px
+  color #000
+  border 1px solid $black-10
+  &:focus
+    border-color $black-38
+  @media (max-width $breakpoint-sm)
+    padding-left 32px
+
+.payment__form-select
+  position relative
+  &.open
+    .payment__form-select-arrow
+      transform rotate(180deg)
+    .payment__form-select-list
+      display block
+  &.active
+    .payment__form-select-active
+      color #000
+
+.payment__form-select-arrow
+  position absolute
+  right 16px
+  top 16px
+  .icon
+    width 24px
+    height 24px
+
+.payment__form-select-active
+  border 1px solid $black-10
+  display flex
+  align-items center
+  height 56px
+  padding 0 20px 0 56px
+  border-radius 8px
+  color $black-38
+  cursor pointer
+  @media (max-width $breakpoint-sm)
+    padding-left 32px
+
+.payment__form-select-list
+  position absolute
+  left 0
+  top 100%
+  width 100%
+  box-shadow 0 -4px 40px 0 $black-10
+  z-index 10
+  border-radius 8px
+  background-color #fff
+  overflow hidden
+  display none
+
+.payment__form-select-item
+  padding 18px 24px
+  cursor pointer
+  transition all .2s
+  display block
+  width 100%
+  text-align left
+  &:hover,
+  &.active
+    background-color $black-10
+
+.payment__form-btn
+  width 100%
+  margin-top 12px
+  margin-bottom 14px
+
+.payment__form-check
+  position relative
+  a
+    color inherit
+    text-decoration underline
+    &:hover
+      text-decoration none
+  input
+    display none
+    &:checked + label
+      &:before
+        background-color $black-38
+        border-color transparent
+      &:after
+        opacity 1
+  label
+    padding-left 32px
+    display block
+    cursor pointer
+    font-size 14px
+    line-height 1.43
+    color $black-38
+    &:before,
+    &:after
+      content ''
+      display block
+      position absolute
+      transition all .2s
+    &:before
+      width 18px
+      height 18px
+      border 2px solid $black-38
+      border-radius 3px
+      background-color transparent
+      left 0
+    &:after
+      width 5px
+      height 9px
+      border 1px solid transparent
+      border-bottom-color white
+      border-right-color white
+      left 7px
+      top 3px
+      transform rotate(45deg)
+      opacity 0

@@ -1,0 +1,11 @@
+.modal.remodal(data-remodal-id="free-lesson")
+  button.modal__close(data-remodal-action="close" aria-label="Закрыть модальное окно")
+    +icon('close')
+  .modal__wrap
+    h4.modal__title Записаться на бесплатный урок
+    form.payment__form-form(data-validation)
+      .payment__form-group
+        .payment__form-icon
+          +icon('user')
+        input.payment__form-input(type="text" placeholder="Имя" data-name="name")
+      include ./base-form
