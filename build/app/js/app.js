@@ -176,9 +176,13 @@
 	}
 
 	const scrollBody = (selector, offset = 70) => {
-		$('html, body').stop().animate({
-			scrollTop: $( selector ).offset().top + offset
-		}, 400);
+		if ($(selector).length) {
+			$('html, body').stop().animate({
+				scrollTop: $( selector ).offset().top + offset
+			}, 400);
+		}
+
+		window.location = $(selector).length ? `${window.location.pathname}${selector}` : `/${selector}`
 	}
 
 	if ($('.js-scroll-to').length) {
@@ -228,6 +232,41 @@
 			}
 		})
 	}
+
+	function getQueryStringValue (key) {  
+		return decodeURIComponent(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + encodeURIComponent(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));  
+	}  
+
+	if ($('.payment-page').length) {
+		$('.payment-page__btn').click((e) => {
+			$(e.target).addClass('active').siblings().removeClass('active')
+			$('.payment-page__tab').eq($(e.target).index()).addClass('active').siblings().removeClass('active')
+		})
+
+		$(document).ready(function() {
+			if (getQueryStringValue("email").length) {
+				$('input[data-email]').val(getQueryStringValue("email"))
+			}
+			if (getQueryStringValue("phone").length) {
+				$('input[data-phone]').val(getQueryStringValue("phone"))
+			}
+			if (getQueryStringValue("data").length) {
+				const date = getQueryStringValue("data")
+				const select = $('.payment__form-select')
+
+				if (!select.hasClass('active')) {
+					select.addClass('active')
+				}
+				select.find('.payment__form-select-active').text(date)
+				select.find('.payment__form-select-item').each((_, item) => {
+					if ($(item).text().trim() === date.trim()) {
+						$(item).addClass('active').siblings().removeClass('active')
+					}
+				})
+			}
+		})
+
+	}
 })();
 $(document).ready(function () {
     svg4everybody({});
@@ -256,12 +295,15 @@ $(document).ready(function () {
 		}
 	}
 
+	$('.payment .payment__form-form').addClass('js-payment-form')
+
 	/* Validate Form */
 	function initializeValidate() {
 		$('[data-validation]').each(function () {
 		    var validator = $(this),
 		        inputs = validator.find('input:not(:checkbox, [type=hidden]), textarea'),
 						submit = validator.find('button[type=submit]'),
+						selects = validator.find('.payment__form-select'),
 						isSubmited = false,
 						stopSubmitIndex = 0;
 			
@@ -270,6 +312,18 @@ $(document).ready(function () {
 		    		$(this).parent().removeClass('invalid')
 		    	});
 				});
+
+				selects.each((index, item) => {
+					var self = $(item),
+						placeholder = self.data('placeholder'),
+						active = self.find('.payment__form-select-active');
+					
+					active.bind('DOMSubtreeModified', function(e){
+						if (placeholder !== $(e.target).text()) {
+							self.removeClass('invalid').addClass('valid');
+						}
+					});
+				})
 				
 		    validator.on('change keyup', 'input[data-name]', function () {
 						var elm = $(this);
@@ -285,8 +339,25 @@ $(document).ready(function () {
 						if ($(item).parent().hasClass('invalid')) stopSubmitIndex++;
 					})
 
+					if (selects.length) {
+						selects.each((index, item) => checkSelect(item))
+					}
+
 					if (stopSubmitIndex > 0) {
 						e.preventDefault();
+					}
+
+					if (validator.hasClass('js-payment-form') && stopSubmitIndex === 0) {
+						e.preventDefault();
+						const values = []
+						inputs.each((index, item) => {
+							values.push(`${$(item).data('email') ? 'email' : 'phone'}=${$(item).val()}`)
+						})
+						selects.each((index, item) => {
+							values.push(`data=${$(item).find('.payment__form-select-active').text()}`)
+						})
+
+						window.location = `${$(submit).data('href')}?${values.join('&')}`
 					}
 		    });
 		});
@@ -295,10 +366,10 @@ $(document).ready(function () {
 	function checkSelect(item) {
 		var self = $(item),
 			placeholder = self.data('placeholder'),
-			active = self.find('.select-field__active');
+			active = self.find('.payment__form-select-active');
 		
 		if (placeholder === active.text()) {
-			self.parent().removeClass('valid').addClass('invalid')
+			self.removeClass('valid').addClass('invalid')
 		}
 	}
 

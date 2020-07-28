@@ -1,23 +1,7 @@
 form.payment__form-form(data-validation)
-  .payment__form-group.payment__form-select(data-placeholder="Выберите дату начала курса")
-    .payment__form-icon
-      +icon('date')
-    .payment__form-select-arrow
-      +icon('arrow-down')
-    span.payment__form-select-active Выберите дату начала курса
-    .payment__form-select-list
-      button.payment__form-select-item(type="button") 01.08.2020
-      button.payment__form-select-item(type="button") 01.09.2020
-      button.payment__form-select-item(type="button") 01.10.2020
-  .payment__form-group
-    .payment__form-icon
-      +icon('email')
-    input.payment__form-input(type="text" placeholder="Email" data-name="email")
-  .payment__form-group
-    .payment__form-icon
-      +icon('phone')
-    input.payment__form-input(type="text" placeholder="Телефон" data-phone data-name="phone")
-  button.btn.payment__form-btn(type="submit") Отправить
+  include ./global-form-inputs
+  // для "перейти к оплате" добавить data-href на страницу оплаты
+  button.btn.payment__form-btn(type="submit" data-href="payment.html") Перейти к оплате
   .payment__form-check
     input(type="checkbox" checked id="checkbox")
     label(for="checkbox") Согласен с условиями 

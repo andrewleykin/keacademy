@@ -1,0 +1,54 @@
+.form-group
+  &+&
+    margin-top 20px
+  &.invalid
+    .form-group__input
+      border-color $tomato
+
+.form-group__label
+  font-size 18px
+  line-height 125%
+  letter-spacing 0.8px
+  color $black-54
+  display block
+  margin-bottom 7px
+  cursor pointer
+  &--checkbox
+    display flex
+    justify-content space-between
+    max-width 350px
+  &--select
+    cursor default
+  @media (max-width breakpoint-md)
+    font-size 14px
+
+.form-group__input
+  background-color #fff
+  border 1px solid $black-10
+  border-radius 8px
+  box-sizing border-box
+  color gray-1
+  height 50px
+  padding 0 20px
+  display block
+  width 100%
+  &::placeholder
+    color $black-54
+  &:focus
+    border-color $black-38
+  &[data-summ]
+    font-family -apple-system, 'Roboto', Arial, sans-serif
+
+.form-group__checkbox
+  display none
+  &:checked + .checkbox-label
+    &:before
+      border-color $black-24
+      background-color $black-24
+    &:after
+      opacity 1
+  &:disabled + .checkbox-label
+    &:before
+      border-color #fff
+      background-color #fff
+

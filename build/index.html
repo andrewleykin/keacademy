@@ -24,7 +24,7 @@
                   <button class="menu__item js-scroll-to" href="#" data-href="#payment">Стоимость</button>
                 </nav>
               </div>
-              <div class="header__actions"><a class="header__tg" href="#"><img src="app/img/general/tg.svg" alt="telegram icon"></a><a class="header__payment" href="#"><img src="app/img/general/rocket.svg" alt="rocket icon"><span>Оплата</span></a></div>
+              <div class="header__actions"><a class="header__tg" href="#"><img src="app/img/general/tg.svg" alt="telegram icon"></a><a class="header__payment" href="payment.html"><img src="app/img/general/rocket.svg" alt="rocket icon"><span>Оплата</span></a></div>
             </div>
           </div>
         </header>
@@ -655,7 +655,7 @@
                           <use xlink:href="app/img/svg/symbol/sprite.svg#email"></use>
                         </svg>
                       </div>
-                      <input class="payment__form-input" type="text" placeholder="Email" data-name="email">
+                      <input class="payment__form-input" type="text" name="email" placeholder="Email" data-email="true" data-name="email">
                     </div>
                     <div class="payment__form-group">
                       <div class="payment__form-icon">
@@ -663,9 +663,10 @@
                           <use xlink:href="app/img/svg/symbol/sprite.svg#phone"></use>
                         </svg>
                       </div>
-                      <input class="payment__form-input" type="text" placeholder="Телефон" data-phone data-name="phone">
+                      <input class="payment__form-input" type="text" name="phone" placeholder="Телефон" data-phone data-name="phone">
                     </div>
-                    <button class="btn payment__form-btn" type="submit">Отправить</button>
+                    <!-- для "перейти к оплате" добавить data-href на страницу оплаты-->
+                    <button class="btn payment__form-btn" type="submit" data-href="payment.html">Перейти к оплате</button>
                     <div class="payment__form-check">
                       <input type="checkbox" checked id="checkbox">
                       <label for="checkbox">Согласен с условиями <a href="privacy.html">Политики конфиденциальности</a></label>
@@ -683,6 +684,7 @@
             </button>
             <div class="modal__wrap">
               <h4 class="modal__title">Записаться на бесплатный урок</h4>
+              <!-- У кнопки надо поменять текст на "Отправить"-->
               <form class="payment__form-form" data-validation>
                 <div class="payment__form-group payment__form-select" data-placeholder="Выберите дату начала курса">
                   <div class="payment__form-icon">
@@ -707,7 +709,7 @@
                       <use xlink:href="app/img/svg/symbol/sprite.svg#email"></use>
                     </svg>
                   </div>
-                  <input class="payment__form-input" type="text" placeholder="Email" data-name="email">
+                  <input class="payment__form-input" type="text" name="email" placeholder="Email" data-email="true" data-name="email">
                 </div>
                 <div class="payment__form-group">
                   <div class="payment__form-icon">
@@ -715,9 +717,10 @@
                       <use xlink:href="app/img/svg/symbol/sprite.svg#phone"></use>
                     </svg>
                   </div>
-                  <input class="payment__form-input" type="text" placeholder="Телефон" data-phone data-name="phone">
+                  <input class="payment__form-input" type="text" name="phone" placeholder="Телефон" data-phone data-name="phone">
                 </div>
-                <button class="btn payment__form-btn" type="submit">Отправить</button>
+                <!-- для "перейти к оплате" добавить data-href на страницу оплаты-->
+                <button class="btn payment__form-btn" type="submit" data-href="payment.html">Перейти к оплате</button>
                 <div class="payment__form-check">
                   <input type="checkbox" checked id="checkbox">
                   <label for="checkbox">Согласен с условиями <a href="privacy.html">Политики конфиденциальности</a></label>

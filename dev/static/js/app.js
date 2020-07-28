@@ -176,9 +176,13 @@
 	}
 
 	const scrollBody = (selector, offset = 70) => {
-		$('html, body').stop().animate({
-			scrollTop: $( selector ).offset().top + offset
-		}, 400);
+		if ($(selector).length) {
+			$('html, body').stop().animate({
+				scrollTop: $( selector ).offset().top + offset
+			}, 400);
+		}
+
+		window.location = $(selector).length ? `${window.location.pathname}${selector}` : `/${selector}`
 	}
 
 	if ($('.js-scroll-to').length) {
@@ -227,5 +231,40 @@
 				video.get(0).play()
 			}
 		})
+	}
+
+	function getQueryStringValue (key) {  
+		return decodeURIComponent(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + encodeURIComponent(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));  
+	}  
+
+	if ($('.payment-page').length) {
+		$('.payment-page__btn').click((e) => {
+			$(e.target).addClass('active').siblings().removeClass('active')
+			$('.payment-page__tab').eq($(e.target).index()).addClass('active').siblings().removeClass('active')
+		})
+
+		$(document).ready(function() {
+			if (getQueryStringValue("email").length) {
+				$('input[data-email]').val(getQueryStringValue("email"))
+			}
+			if (getQueryStringValue("phone").length) {
+				$('input[data-phone]').val(getQueryStringValue("phone"))
+			}
+			if (getQueryStringValue("data").length) {
+				const date = getQueryStringValue("data")
+				const select = $('.payment__form-select')
+
+				if (!select.hasClass('active')) {
+					select.addClass('active')
+				}
+				select.find('.payment__form-select-active').text(date)
+				select.find('.payment__form-select-item').each((_, item) => {
+					if ($(item).text().trim() === date.trim()) {
+						$(item).addClass('active').siblings().removeClass('active')
+					}
+				})
+			}
+		})
+
 	}
 })();

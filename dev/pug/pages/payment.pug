@@ -1,0 +1,19 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Оплата'
+
+block content
+	.payment-page
+		.payment-page__wrap
+			h1.title.payment-page__title Сумма 24 500 Руб.
+			p.payment-page__text Выберите удобный способ оплаты:
+			.payment-page__actions
+				button.btn.btn--light.payment-page__btn(type="button") Оплата картой
+				button.btn.btn--light.payment-page__btn(type="button") Сформировать счет для ЮЛ
+		.payment-page__tabs
+			.payment-page__tab
+				include ../section/payment/human
+			.payment-page__tab
+				include ../section/payment/organization
+		include ../modules/payment-modal

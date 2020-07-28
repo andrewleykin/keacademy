@@ -145,6 +145,14 @@
   border 1px solid $black-10
   &:focus
     border-color $black-38
+  // Против автозаполнение
+  &:-webkit-autofill
+    -webkit-animation-name autofill
+    -webkit-animation-fill-mode both
+  @-webkit-keyframes autofill
+    to
+      color #000
+      background transparent
   @media (max-width $breakpoint-sm)
     padding-left 48px
     height 48px

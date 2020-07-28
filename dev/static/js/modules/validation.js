@@ -17,12 +17,15 @@
 		}
 	}
 
+	$('.payment .payment__form-form').addClass('js-payment-form')
+
 	/* Validate Form */
 	function initializeValidate() {
 		$('[data-validation]').each(function () {
 		    var validator = $(this),
 		        inputs = validator.find('input:not(:checkbox, [type=hidden]), textarea'),
 						submit = validator.find('button[type=submit]'),
+						selects = validator.find('.payment__form-select'),
 						isSubmited = false,
 						stopSubmitIndex = 0;
 			
@@ -31,6 +34,18 @@
 		    		$(this).parent().removeClass('invalid')
 		    	});
 				});
+
+				selects.each((index, item) => {
+					var self = $(item),
+						placeholder = self.data('placeholder'),
+						active = self.find('.payment__form-select-active');
+					
+					active.bind('DOMSubtreeModified', function(e){
+						if (placeholder !== $(e.target).text()) {
+							self.removeClass('invalid').addClass('valid');
+						}
+					});
+				})
 				
 		    validator.on('change keyup', 'input[data-name]', function () {
 						var elm = $(this);
@@ -46,8 +61,25 @@
 						if ($(item).parent().hasClass('invalid')) stopSubmitIndex++;
 					})
 
+					if (selects.length) {
+						selects.each((index, item) => checkSelect(item))
+					}
+
 					if (stopSubmitIndex > 0) {
 						e.preventDefault();
+					}
+
+					if (validator.hasClass('js-payment-form') && stopSubmitIndex === 0) {
+						e.preventDefault();
+						const values = []
+						inputs.each((index, item) => {
+							values.push(`${$(item).data('email') ? 'email' : 'phone'}=${$(item).val()}`)
+						})
+						selects.each((index, item) => {
+							values.push(`data=${$(item).find('.payment__form-select-active').text()}`)
+						})
+
+						window.location = `${$(submit).data('href')}?${values.join('&')}`
 					}
 		    });
 		});
@@ -56,10 +88,10 @@
 	function checkSelect(item) {
 		var self = $(item),
 			placeholder = self.data('placeholder'),
-			active = self.find('.select-field__active');
+			active = self.find('.payment__form-select-active');
 		
 		if (placeholder === active.text()) {
-			self.parent().removeClass('valid').addClass('invalid')
+			self.removeClass('valid').addClass('invalid')
 		}
 	}
 
