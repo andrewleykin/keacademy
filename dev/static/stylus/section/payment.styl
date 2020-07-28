@@ -20,7 +20,7 @@
     top 0
     transform translateX(-50%)
   @media (max-width $breakpoint-md)
-    padding 24px
+    padding 16px
     display block
     &:after
       display none
@@ -30,7 +30,15 @@
   width 100%
   @media (max-width $breakpoint-md)
     max-width 100%
-    margin-bottom 24px
+    margin-bottom 32px
+    &:after
+      content ''
+      display block
+      width calc(100% + 32px)
+      height 1px
+      background-color $black-10
+      transform translate(-16px, 16px)
+
 
 .payment__subtitle
   @extend .program__subtitle
@@ -106,7 +114,6 @@
   border-radius 8px
   background-color #ffffff
   position relative
-  min-height 56px
   &+&
     margin-top 8px
   &.invalid
@@ -122,10 +129,11 @@
     width 24px
     height 24px
   @media (max-width $breakpoint-sm)
-    left 8px
+    left 12px
+    top 12px
     .icon
-      width 16px
-      height 16px
+      width 24px
+      height 24px
 
 .payment__form-input
   display block
@@ -138,7 +146,8 @@
   &:focus
     border-color $black-38
   @media (max-width $breakpoint-sm)
-    padding-left 32px
+    padding-left 48px
+    height 48px
 
 .payment__form-select
   position relative
@@ -169,7 +178,8 @@
   color $black-38
   cursor pointer
   @media (max-width $breakpoint-sm)
-    padding-left 32px
+    padding-left 48px
+    height 48px
 
 .payment__form-select-list
   position absolute

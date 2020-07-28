@@ -1,6 +1,30 @@
 // Начальная функция
 
 (function(){
+
+	const isMobile = window.innerWidth <= 768
+
+	if (isMobile) {
+		$('.hero__actions-btn span').eq(0).text('Программа курса')
+		$('.hero__actions-btn span').eq(1).text('Подробнее')
+
+		const toggleMenu = () => {
+			$('.header__burger').toggleClass('active')
+			$('.header__menu').toggleClass('active')
+		}
+
+		$('.header__burger').click(toggleMenu)
+		$('.header__menu .menu__item').click(toggleMenu)
+
+		$(document).click(function(e) {
+			var el = '.header';
+			if ($(e.target).closest(el).length) return;
+			if ($('.header__menu').hasClass('active')) {
+				toggleMenu()
+			}
+		})
+	}
+
 	if ($('.hero__slider-slider').length) {
 		const slider = $('.hero__slider-slider')
 		const arrows = $('.hero__slider-arrow')
@@ -53,33 +77,36 @@
 	}
 
 	if ($('.payment__form-select').length) {
-		const select = $('.payment__form-select')
-		const placeholder = select.data('placeholder')
-		const active = select.find('.payment__form-select-active')
-		const items = select.find('.payment__form-select-item')
-		// const list = select.find('.payment__form-select-list')
+		const selects = $('.payment__form-select')
 
-		active.click(function() {
-			select.toggleClass('open')
-		})
-
-		items.click(function() {
-			if ($(this).hasClass('active')) {
-				$(this).removeClass('active')
-				active.text(placeholder)
-				select.removeClass('active')
-			} else {
-				$(this).addClass('active').siblings().removeClass('active')
-				active.text($(this).text())
-				select.addClass('active')
-			}
-			select.removeClass('open')
+		selects.each((index, item) => {
+			const select = $(item)
+			const placeholder = select.data('placeholder')
+			const active = select.find('.payment__form-select-active')
+			const items = select.find('.payment__form-select-item')
+	
+			active.click(function() {
+				select.toggleClass('open')
+			})
+	
+			items.click(function() {
+				if ($(this).hasClass('active')) {
+					$(this).removeClass('active')
+					active.text(placeholder)
+					select.removeClass('active')
+				} else {
+					$(this).addClass('active').siblings().removeClass('active')
+					active.text($(this).text())
+					select.addClass('active')
+				}
+				select.removeClass('open')
+			})
 		})
 
 		$(document).click(function (e) {
 			var el = '.payment__form-select';
 			if ($(e.target).closest(el).length) return;
-			select.removeClass('open')
+			$(el).removeClass('open')
 		});
 	}
 
@@ -90,6 +117,11 @@
 	if ($('.program').length) {
 		const slider = $('.program__slider-slider')
 		const lectures = $('.program__lectures')
+		const slides = $('.program__slide')
+
+		slides.each((index, item) => {
+			$(item).find('.program__slide-count').text(`${index+1}/${slides.length}`)
+		})
 
 		const changeTabs = (tabs, contents, index) => {
 			$(tabs).eq(index).addClass('active').siblings().removeClass('active')
@@ -98,14 +130,24 @@
 
 		slider.slick({
 			arrows: false,
-			asNavFor: lectures
+			asNavFor: lectures,
+			responsive: [
+				{
+					breakpoint: 768,
+					settings: {
+						variableWidth: true
+					}
+				}
+			]
 		})
 
 		lectures.slick({
-			arrows: false,
-			fade: true,
-			asNavFor: slider,
 			draggable: false,
+			arrows: false,
+			speed: 500,
+			fade: true,
+			cssEase: 'linear',
+			asNavFor: slider,
 		})
 
 		lectures.on('beforeChange', function(event, slick, _, nextSlide){
@@ -115,6 +157,9 @@
 			const index = 0
 
 			changeTabs(tabs, contents, index)
+			if (isMobile) {
+				$('.program__slider-mobile-count').text(`${nextSlide+1}/${slides.length}`)
+			}
 		});
 
 		$('.program__slider-arrow').click(function() {
@@ -139,7 +184,8 @@
 	if ($('.js-scroll-to').length) {
 		$('.js-scroll-to').on("click", function(){ 
 			const href =  $(this).data('href')
-			const offset = href === '#video' ? -70 : 70
+			const num = isMobile ? 0 : 70
+			const offset = href === '#video' ? -isMobile : isMobile
 			scrollBody(href, offset)
 			return false;
 		});
@@ -148,12 +194,13 @@
 	if ($('.js-payment-scroll').length) {
 		$('.js-payment-scroll').click(function() {
 			const date = $(this).data('date')
+			const select = $('.payment__form .payment__form-select')
 
-			if (!$('.payment__form-select').hasClass('active')) {
-				$('.payment__form-select').addClass('active')
+			if (!select.hasClass('active')) {
+				select.addClass('active')
 			}
-			$('.payment__form-select-active').text(date)
-			$('.payment__form-select-item').each((_, item) => {
+			select.find('.payment__form-select-active').text(date)
+			select.find('.payment__form-select-item').each((_, item) => {
 				if ($(item).text().trim() === date.trim()) {
 					$(item).addClass('active').siblings().removeClass('active')
 				}

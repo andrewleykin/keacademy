@@ -12,19 +12,19 @@
     max-width 45%
   @media (max-width $breakpoint-md)
     max-width 100%
-    margin-bottom 48px
+    margin-bottom 24px
 
 .clients__title
   margin-bottom 36px
   @media (max-width $breakpoint-md)
-    margin-bottom 24px
+    margin-bottom 16px
 
 .clients__subtitle
   font-size 20px
   line-height 1.6
   color $black-54
   @media (max-width $breakpoint-md)
-    font-size 16px
+    font-size 14px
 
 .clients__list
   max-width 693px
@@ -36,7 +36,8 @@
     display block
     margin-bottom 0
   @media (max-width $breakpoint-md)
-    max-width 100%
+    display flex
+    margin-bottom -24px
 
 .clients__item
   max-width 50%
@@ -45,10 +46,10 @@
     max-width 100%
     display flex
     align-items center
-  @media (max-width $breakpoint-sm)
-    margin-bottom 0
-    &+&
-      margin-top 24px
+  @media (max-width $breakpoint-md)
+    display block
+    max-width 45%
+    margin-bottom 24px
 
 .clients__img
   max-width 80px
@@ -59,6 +60,9 @@
     flex none
     margin-bottom 0
     margin-right 24px
+  @media (max-width $breakpoint-md)
+    margin-right 0
+    margin-bottom 14px
 
 .clients__text
   font-size 18px
@@ -66,4 +70,4 @@
   b
     font-weight 500
   @media (max-width $breakpoint-md)
-    font-size 16px
+    font-size 14px

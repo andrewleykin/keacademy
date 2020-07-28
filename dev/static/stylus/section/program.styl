@@ -1,7 +1,10 @@
+.program
+  position relative
+
 .program__title
   margin-bottom 30px
   @media (max-width $breakpoint-md)
-    margin-bottom 24px
+    margin-bottom 16px
 
 .program__subtitle
   font-size 20px
@@ -14,7 +17,20 @@
   margin-bottom 40px
   @media (max-width $breakpoint-md)
     font-size 16px
-    margin-bottom 24px
+    margin-bottom 16px
+
+.program__slider-mobile-count
+  display none
+  font-size 14px
+  line-height 1.43
+  color $black-54
+  position absolute
+  right 16px
+  top 131px
+  @media (max-width $breakpoint-md)
+    display block
+  @media (max-width $breakpoint-sm)
+    top 115px
 
 .program__slider
   display flex
@@ -22,7 +38,7 @@
   justify-content space-between
   margin-bottom 50px
   @media (max-width $breakpoint-md)
-    margin-bottom 48px
+    margin-bottom 24px
 
 .program__slider-arrow
   cursor pointer
@@ -34,13 +50,19 @@
     .icon
       opacity 0.8
   @media (max-width $breakpoint-md)
-    .icon
-      width 24px
-      height 24px
+    display none
 
 .program__slider-slider
   max-width 78%
   margin 0 10px
+  @media (max-width $breakpoint-md)
+    margin 0
+    max-width 100%
+
+.program__slide
+  @media (max-width $breakpoint-md)
+    max-width 270px
+    margin 0 6px
 
 .program__slide-wrap
   border-radius 16px
@@ -49,6 +71,11 @@
   @media (max-width $breakpoint-lg)
     border none
     display block
+  @media (max-width $breakpoint-md)
+    border-radius 16px
+    border solid 1px $black-10
+    padding 16px
+    position relative
 
 .program__slide-img
   width 100%
@@ -62,7 +89,9 @@
     border-radius 12px
     margin-bottom 24px
   @media (max-width $breakpoint-md)
-    max-width 180px
+    max-width 56px
+    height 56px
+    margin-bottom 16px
 
 .program__slide-info
   padding 32px 42px
@@ -74,23 +103,39 @@
   display flex
   align-items center
   justify-content space-between
+  @media (max-width $breakpoint-md)
+    margin-bottom 0
 
 .program__slide-name
   font-size 24px
   font-weight 500
   line-height 1.33
+  @media (max-width $breakpoint-md)
+    font-size 14px
+    line-height 1.43
+    position absolute
+    top 24px
+    left 88px
 
 .program__slide-count
   font-size 24px
   font-weight 500
   line-height 1.33
   color $tomato
+  @media (max-width $breakpoint-md)
+    display none
 
 .program__slide-desc
   line-height 1.5
   color $black-54
   display block
   margin-bottom 14px
+  @media (max-width $breakpoint-md)
+    font-size 12px
+    margin-bottom 0
+    position absolute
+    top 46px
+    left 88px
 
 .program__slide-list
   line-height 1.75
@@ -99,22 +144,33 @@
   li
     list-style-type decimal
     list-style-position inside
+  @media (max-width $breakpoint-md)
+    font-size 12px
+    line-height 1.5
+    color $black-54
 
 .program__slide-text
   font-size 14px
   line-height 1.57
   color $black-54
+  @media (max-width $breakpoint-md)
+    display none
 
 .program__lectures
   margin-bottom 54px
   @media (max-width $breakpoint-md)
     margin-bottom 24px
 
+.program__lectures-mobile
+  display none
+  @media (max-width $breakpoint-md)
+    display block
+
 .program__lectures-wrap
   display flex
   justify-content space-between
   @media (max-width $breakpoint-md)
-    display block
+    display none
 
 .program__lectures-tabs
   width 100%

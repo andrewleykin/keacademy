@@ -3,10 +3,8 @@
   overflow hidden
   @media (max-width $breakpoint-lg)
     padding 80px 0 60px
-  @media (max-width $breakpoint-lg)
-    padding 60px 0 40px
-  @media (max-width $breakpoint-sm)
-    padding 40px 0
+  @media (max-width $breakpoint-md)
+    padding 60px 0
 
 .hero__wrap
   display flex
@@ -20,11 +18,14 @@
   margin-right 10px
   @media (max-width $breakpoint-lg)
     max-width 55%
-  @media (max-width $breakpoint-lg)
+  @media (max-width $breakpoint-md)
     max-width 100%
 
 .hero__title
   margin-bottom 20px
+  @media (max-width $breakpoint-sm)
+    max-width 230px
+    margin-bottom 16px
 
 .hero__subtitle
   font-size 24px
@@ -39,6 +40,9 @@
   @media (max-width $breakpoint-lg)
     display block
     margin 24px 0
+  @media (max-width $breakpoint-sm)
+    display flex
+    margin-bottom 32px
 
 .hero__actions-btn
   &+&
@@ -49,13 +53,19 @@
     &+&
       margin-left 0
       margin-top 16px
+  @media (max-width $breakpoint-sm)
+    max-width 150px
+    width auto
+    &+&
+      margin-left 8px
+      margin-top 0
 
 .hero__slider
   border-top 1px solid $black-10
   padding-top 48px
   display flex
   @media (max-width $breakpoint-md)
-    padding-top 24px
+    padding-top 32px
 
 .hero__slider-slider
   flex auto
@@ -86,6 +96,7 @@
   font-weight 500
   @media (max-width $breakpoint-sm)
     display block
+    padding-bottom 38px
 
 .hero__slide-info
   font-size 16px
@@ -147,13 +158,8 @@
     left 30px
   @media (max-width $breakpoint-lg)
     max-width 40%
-  @media (max-width $breakpoint-lg)
-    max-width 70%
-    margin 100px auto 0
-  @media (max-width $breakpoint-sm)
-    margin-top 40px
-    &:after
-      display none
+  @media (max-width $breakpoint-md)
+    display none
 
 .hero__view-img
   border-radius 20px
