@@ -189,7 +189,12 @@
 		$('.js-scroll-to').on("click", function(){ 
 			const href =  $(this).data('href')
 			const num = isMobile ? 0 : 70
-			const offset = href === '#video' ? -isMobile : isMobile
+			const offset = href === '#program' && !isMobile 
+				? 110 
+				: href === '#video' 
+					? -num 
+					: num
+
 			scrollBody(href, offset)
 			return false;
 		});
