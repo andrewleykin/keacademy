@@ -14,7 +14,7 @@
   color $black-54
   display block
   text-transform uppercase
-  margin-bottom 40px
+  margin-bottom 20px
   @media (max-width $breakpoint-md)
     font-size 16px
     margin-bottom 16px
@@ -36,9 +36,7 @@
   display flex
   align-items center
   justify-content space-between
-  margin-bottom 50px
-  @media (max-width $breakpoint-md)
-    margin-bottom 24px
+  margin-bottom 24px
 
 .program__slider-arrow
   cursor pointer
@@ -169,14 +167,13 @@
 
 .program__lectures-wrap
   display flex
-  justify-content space-between
   @media (max-width $breakpoint-md)
     display none
 
 .program__lectures-tabs
   width 100%
-  max-width 50%
-  margin-right 10px
+  max-width 40%
+  margin-right 30px
   counter-reset item
   li
     color $black-38
@@ -190,7 +187,7 @@
     &:before
       content counter(item, decimal-leading-zero) " "
       counter-increment item
-      margin-right 40px
+      margin-right 20px
   li + li
     margin-top 20px
   @media (max-width $breakpoint-md)
