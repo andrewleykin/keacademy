@@ -14,11 +14,12 @@
   width = 20px
   height = 2px
   translate = 4px
-  bg = #000
+  bg = #fff
 
   cursor pointer
   display none
   flex-direction column
+  background-color transparent
   &::before,&::after,span
     content ""
     display block
@@ -53,6 +54,7 @@
 .header__menu
   @media (max-width $breakpoint-lg)
     order 2
+    width 100%
   @media (max-width $breakpoint-md)
     margin-top 10px
   @media (max-width $breakpoint-sm)

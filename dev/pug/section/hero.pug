@@ -1,4 +1,5 @@
 section.hero
+  .hero__bg
   .container
     .hero__wrap
       .hero__info
@@ -7,7 +8,7 @@ section.hero
         .hero__actions
           button.btn.hero__actions-btn.js-scroll-to(type="button" data-href="#program") 
             span Посмотреть программу
-          button.btn.btn--light.btn--icon.hero__actions-btn.js-scroll-to(type="button" data-href="#video") 
+          button.btn.btn--outline-white.btn--icon.hero__actions-btn.js-scroll-to(type="button" data-href="#video") 
             +icon('play')
             span Посмотреть видео
         .hero__slider
@@ -34,9 +35,3 @@ section.hero
                 button.hero__slide-btn.js-payment-scroll(type="button" data-date="01.10.2020") Записаться
           button.hero__slider-arrow.next(type="button" aria-label="Следующее курс")
             +icon('arrow-right')
-      .hero__view
-        .hero__view-img
-          img(src="https://via.placeholder.com/420x540" alt="Егор Попов")
-        .hero__view-info
-          span.hero__view-name Егор Попов
-          span.hero__view-desc Автор курса

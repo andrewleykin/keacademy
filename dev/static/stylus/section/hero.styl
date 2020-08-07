@@ -1,10 +1,42 @@
 .hero
   padding 104px 0 76px
-  overflow hidden
+  position relative
   @media (max-width $breakpoint-lg)
     padding 80px 0 60px
   @media (max-width $breakpoint-md)
     padding 60px 0
+
+.hero__bg
+  background url('../img/content/hero-bg.jpg') center  no-repeat
+  background-size cover
+  position absolute
+  top -81px
+  left 0
+  bottom 0
+  right 0
+  z-index -1
+  min-height calc(100% + 81px)
+  &:after
+    content ''
+    display block
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+    z-index -1
+    background-image linear-gradient(to right, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.86) 28%, $black-24 100%)
+  @media (max-width $breakpoint-lg)
+    top -123px
+    min-height calc(100% + 123px)
+  @media (max-width $breakpoint-md)
+    top -133px
+    min-height calc(100% + 133px)
+  @media (max-width $breakpoint-sm)
+    top -70px
+    min-height calc(100% + 70px)
+    background-position 60% center
+
 
 .hero__wrap
   display flex
@@ -23,6 +55,7 @@
 
 .hero__title
   margin-bottom 20px
+  color white
   @media (max-width $breakpoint-sm)
     max-width 230px
     margin-bottom 16px
@@ -30,7 +63,7 @@
 .hero__subtitle
   font-size 24px
   line-height 1.5
-  color $black-54
+  color white
   @media (max-width $breakpoint-lg)
     font-size 18px
 
@@ -61,7 +94,7 @@
       margin-top 0
 
 .hero__slider
-  border-top 1px solid $black-10
+  border-top 1px solid rgba(255, 255, 255, 0.24)
   padding-top 48px
   display flex
   @media (max-width $breakpoint-md)
@@ -80,11 +113,11 @@
       width 6px
       height 6px
       border-radius 50%
-      background-color rgba(0, 0, 0, 0.12)
+      background-color rgba(255, 255, 255, 0.24)
       cursor pointer
     li.slick-active
       button
-        background-color $black-38
+        background-color rgba(255, 255, 255, 0.54)
     li + li
       margin-left 4px
 
@@ -92,7 +125,9 @@
   display flex
   justify-content space-between
   padding 12px 20px 26px
-  background-color $gray-10
+  -webkit-backdrop-filter blur(10px)
+  backdrop-filter blur(10px)
+  background-color rgba(255, 255, 255, 0.12)
   font-weight 500
   @media (max-width $breakpoint-sm)
     display block
@@ -101,7 +136,7 @@
 .hero__slide-info
   font-size 16px
   line-height 1.5
-  color $black-38
+  color white
   @media (max-width $breakpoint-lg)
     max-width 50%
   @media (max-width $breakpoint-sm)
@@ -110,7 +145,7 @@
 
 .hero__slide-title
   display block
-  color #000
+  color white
 
 .hero__slide-btn
   font-size 18px
@@ -122,70 +157,27 @@
 .hero__slider-arrow
   width 36px
   cursor pointer
-  background-color rgba(0, 0, 0, 0.1)
+  background-color rgba(255, 255, 255, 0.24)
+  -webkit-backdrop-filter blur(10px)
+  backdrop-filter blur(10px)
   &.disabled
-    background-color $gray-10
     cursor default
+    background-color rgba(255, 255, 255, 0.12)
+    .icon
+      opacity 0.5
   &.prev
     border-top-left-radius 8px
     border-bottom-left-radius 8px
     &.disabled
-      border-right 1px solid rgba(0, 0, 0, 0.06)
+      border-right 1px solid rgba(255, 255, 255, 0.12)
+    .icon
+      transform rotate(180deg)
   &.next
     border-top-right-radius 8px
     border-bottom-right-radius 8px
     &.disabled
-      border-left 1px solid rgba(0, 0, 0, 0.06)
+      border-left 1px solid rgba(255, 255, 255, 0.12)
   .icon
     width 20px
     height 20px
-
-.hero__view
-  position relative
-  align-self flex-start
-  position relative
-  z-index 0
-  &:after
-    content ''
-    display block
-    width 100%
-    height 100%
-    border-radius 20px
-    position absolute
-    background-color #f9f9f9
-    z-index -1
-    bottom 30px
-    left 30px
-  @media (max-width $breakpoint-lg)
-    max-width 40%
-  @media (max-width $breakpoint-md)
-    display none
-
-.hero__view-img
-  border-radius 20px
-  overflow hidden
-
-.hero__view-info
-  position absolute
-  bottom 42px
-  left 32px
-  @media (max-width $breakpoint-sm)
-    bottom 16px
-    left 16px
-
-.hero__view-name
-  font-size 24px
-  font-weight 500
-  line-height 1.46
-  color #000
-  display block
-  margin-bottom 6px
-  @media (max-width $breakpoint-sm)
-    font-size 18px
-
-.hero__view-desc
-  font-size 20px
-  line-height 1.2
-  color $black-54
-  @media (max-width $breakpoint-sm)
-    font-size 16px
+    fill white
