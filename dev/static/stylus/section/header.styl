@@ -1,5 +1,19 @@
 .header
   padding 19px 0
+  &--white
+    .header__burger
+      &::before,&::after,span
+        background-color #fff
+    .header__logo
+      .white
+        display block
+      .black
+        display none
+    .menu__item
+      color rgba(255 255 255, 0.54)
+      &:hover
+        color white
+    
 
 .header__wrap
   display flex
@@ -14,7 +28,7 @@
   width = 20px
   height = 2px
   translate = 4px
-  bg = #fff
+  bg = #000
 
   cursor pointer
   display none
@@ -46,6 +60,8 @@
 
 .header__logo
   flex none
+  .white
+    display none
   @media (max-width $breakpoint-sm)
     max-width 140px
     margin-left 18px
