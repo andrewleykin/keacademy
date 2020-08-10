@@ -128,6 +128,10 @@
 			$(contents).eq(index).addClass('active').siblings().removeClass('active')
 		}
 
+		if (isMobile) {
+			$('.program__slider-mobile-count').text(`1/${slides.length}`)
+		}
+
 		slider.slick({
 			arrows: false,
 			asNavFor: lectures,
@@ -309,6 +313,7 @@ $(document).ready(function () {
 		        inputs = validator.find('input:not(:checkbox, [type=hidden]), textarea'),
 						submit = validator.find('button[type=submit]'),
 						selects = validator.find('.payment__form-select'),
+						// checkbox = validator.find('.payment__form-check #checkbox')
 						isSubmited = false,
 						stopSubmitIndex = 0;
 			
@@ -348,6 +353,10 @@ $(document).ready(function () {
 						selects.each((index, item) => checkSelect(item))
 					}
 
+					// if (checkbox && checkbox.val() !== 'on') {
+					// 	stopSubmitIndex++
+					// }
+
 					if (stopSubmitIndex > 0) {
 						e.preventDefault();
 					}
@@ -361,6 +370,7 @@ $(document).ready(function () {
 						selects.each((index, item) => {
 							values.push(`data=${$(item).find('.payment__form-select-active').text()}`)
 						})
+
 
 						window.location = `${$(submit).data('href')}?${values.join('&')}`
 					}

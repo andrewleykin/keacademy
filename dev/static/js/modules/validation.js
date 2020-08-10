@@ -26,6 +26,7 @@
 		        inputs = validator.find('input:not(:checkbox, [type=hidden]), textarea'),
 						submit = validator.find('button[type=submit]'),
 						selects = validator.find('.payment__form-select'),
+						// checkbox = validator.find('.payment__form-check #checkbox')
 						isSubmited = false,
 						stopSubmitIndex = 0;
 			
@@ -65,6 +66,10 @@
 						selects.each((index, item) => checkSelect(item))
 					}
 
+					// if (checkbox && checkbox.val() !== 'on') {
+					// 	stopSubmitIndex++
+					// }
+
 					if (stopSubmitIndex > 0) {
 						e.preventDefault();
 					}
@@ -78,6 +83,7 @@
 						selects.each((index, item) => {
 							values.push(`data=${$(item).find('.payment__form-select-active').text()}`)
 						})
+
 
 						window.location = `${$(submit).data('href')}?${values.join('&')}`
 					}

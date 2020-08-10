@@ -128,6 +128,10 @@
 			$(contents).eq(index).addClass('active').siblings().removeClass('active')
 		}
 
+		if (isMobile) {
+			$('.program__slider-mobile-count').text(`1/${slides.length}`)
+		}
+
 		slider.slick({
 			arrows: false,
 			asNavFor: lectures,
