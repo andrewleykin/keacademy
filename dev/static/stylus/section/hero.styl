@@ -1,21 +1,24 @@
 .hero
   padding 104px 0 76px
   position relative
+  min-height calc(100vh - 89px)
   @media (max-width $breakpoint-lg)
     padding 80px 0 60px
+    min-height calc(100vh - 131px)
   @media (max-width $breakpoint-md)
     padding 60px 0
+    min-height auto
 
 .hero__bg
   background url('../img/content/hero-bg.jpg') center  no-repeat
   background-size cover
   position absolute
-  top -81px
+  top -89px
   left 0
   bottom 0
   right 0
   z-index -1
-  min-height calc(100% + 81px)
+  min-height calc(100% + 89px)
   &:after
     content ''
     display block
@@ -27,11 +30,11 @@
     z-index -1
     background-image linear-gradient(to right, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.86) 28%, $black-24 100%)
   @media (max-width $breakpoint-lg)
-    top -123px
-    min-height calc(100% + 123px)
+    top -131px
+    min-height calc(100% + 131px)
   @media (max-width $breakpoint-md)
-    top -133px
-    min-height calc(100% + 133px)
+    top -140px
+    min-height calc(100% + 140px)
   @media (max-width $breakpoint-sm)
     top -70px
     min-height calc(100% + 70px)
@@ -151,6 +154,7 @@
   color $tomato
   background-color transparent
   cursor pointer
+  margin-top 13px
 
 .hero__slider-arrow
   width 36px

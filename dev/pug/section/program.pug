@@ -1,7 +1,7 @@
 section.program#program
   .container.border-block
     h2.title.program__title.wow.fadeIn Программа курса
-    span.program__subtitle.wow.fadeIn Спикеры
+    //- span.program__subtitle.wow.fadeIn Спикеры
     span.program__slider-mobile-count
     .program__slider
       button.program__slider-arrow.prev(type="button" aria-label="Предыдущее фото")
@@ -14,7 +14,7 @@ section.program#program
         include ../modules/program-slide
       button.program__slider-arrow.next(type="button" aria-label="Следующее фото")
         +icon('circle-arrow-right')
-    span.program__subtitle.wow.fadeIn Лекции спикера
+    //- span.program__subtitle.wow.fadeIn Лекции спикера
     .program__lectures
       include ../modules/program-lecture-block
       include ../modules/program-lecture-block
