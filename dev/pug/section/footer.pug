@@ -1,17 +1,10 @@
 footer.footer.section-bg
   .container
-    a.footer__logo(href="/")
-      .footer__logo-img
-        img(src="app/img/general/logo.svg" alt="KazanExpress")
-      span.footer__logo-sub Академия
+    include ../modules/footer-logo
     .footer__main
       .footer__menu
         include ../modules/menu
-      .footer__links
-        a.footer__link(href="#" aria-label="instagram")
-          +icon('inst')
-        a.footer__link(href="#" aria-label="telegram")
-          img(src="app/img/general/tg.svg" alt="telegram icon")
+      include ../modules/footer-links
     .footer__bottom
       p ООО «Компания» 2020. Все права защищены
       a(href="privacy.html") Политика конфиденциальности

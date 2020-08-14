@@ -4,6 +4,15 @@
   position relative
   border-radius 16px
   text-align left
+  @media (max-width $breakpoint-sm)
+    max-width 100%
+    height 100%
+    padding 16px
+    border-radius 0
+
+.remodal-wrapper
+  @media (max-width $breakpoint-sm)
+    padding 0
 
 .modal__close
   width 24px
@@ -18,6 +27,25 @@
     width 24px
     height 24px
     fill white
+  @media (max-width $breakpoint-sm)
+    background-color transparent
+    right 8px
+    top 8px
+    width 36px
+    height 36px
+    .icon
+      fill black
+      width 36px
+      height 36px
+
+.modal__wrap
+  @media (max-width $breakpoint-sm)
+    padding-top 64px
+    height 100%
+    display flex
+    flex-direction column
+    .modal__btn
+      margin-top auto
 
 .modal__title
   font-size 28px

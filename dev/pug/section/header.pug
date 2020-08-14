@@ -1,4 +1,4 @@
-header.header
+header.header.header--white
   .container
     .header__wrap
       button.header__burger(type="button" aria-label="Открыть меню")
@@ -7,6 +7,9 @@ header.header
         img.white(src="app/img/general/logo--white.svg" alt="KazanExpress white")
         img.black(src="app/img/general/logo.svg" alt="KazanExpress black")
       .header__menu
+        .header__menu-mobile
+          include ../modules/footer-logo
+          include ../modules/footer-links
         include ../modules/menu
       .header__actions
         a.header__tg(href="#")

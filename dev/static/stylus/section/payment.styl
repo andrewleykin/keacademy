@@ -6,8 +6,80 @@
   @media (max-width $breakpoint-md)
     margin-bottom 24px
 
+.payment__timer
+  border-top-left-radius 16px
+  border-top-right-radius 16px
+  background-image linear-gradient(95deg, $tomato, #fa5b57)
+  display flex
+  align-items center
+  justify-content space-between
+  padding 21px 100px 21px 36px
+  @media (max-width $breakpoint-lg)
+    padding-right 21px
+  @media (max-width $breakpoint-md)
+    padding 10px 16px
+  @media (max-width $breakpoint-sm)
+    display block
+    text-align left
+
+.payment__timer-info
+  font-size 20px
+  font-weight 500
+  line-height 1.7
+  color rgba(255, 255, 255, 0.54)
+  flex none
+  margin-right 20px
+  @media (max-width $breakpoint-md)
+    font-size 14px
+    flex auto
+  @media (max-width $breakpoint-sm)
+    margin-right 0
+    margin-bottom 10px
+    text-align center
+
+.payment__timer-title
+  display block
+  color #fff
+  @media (max-width $breakpoint-sm)
+    font-size 18px
+
+.payment__timer-blocks
+  display flex
+  justify-content space-between
+  width 100%
+  max-width 380px
+  @media (max-width $breakpoint-md)
+    max-width 260px
+    margin 0 auto
+  @media (max-width $breakpoint-sm)
+    max-width 90%
+
+.payment__timer-block
+  &+&
+    margin-left 10px
+
+.payment__timer-count
+  font-size 32px
+  font-weight 500
+  line-height 1.25
+  text-align center
+  color #ffffff
+  display block
+  @media (max-width $breakpoint-md)
+    font-size 24px
+
+.payment__timer-name
+  font-size 12px
+  font-weight 500
+  line-height 1.5
+  letter-spacing 0.86px
+  text-align center
+  display block
+  color rgba(255, 255, 255, 0.54)
+
 .payment__block
-  border-radius 16px
+  border-bottom-left-radius 16px
+  border-bottom-right-radius 16px
   box-shadow 0 -4px 40px 0 $black-10
   padding 36px
   display flex

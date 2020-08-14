@@ -1,6 +1,23 @@
 section.payment#payment
   .container
     h2.title.payment__title.wow.fadeIn Стоимость курса
+    .payment__timer#countdown(data-deadline="2020-08-29T14:12:07.000Z")
+      .payment__timer-info
+        span.payment__timer-title Скидка 52%
+        span.payment__timer-descr До конца действия скидки осталось
+      .payment__timer-blocks
+        .payment__timer-block
+          span.payment__timer-count.days 05
+          span.payment__timer-name дни
+        .payment__timer-block
+          span.payment__timer-count.hours 05
+          span.payment__timer-name часы
+        .payment__timer-block
+          span.payment__timer-count.minutes 12
+          span.payment__timer-name минуты
+        .payment__timer-block
+          span.payment__timer-count.seconds 24
+          span.payment__timer-name секунды
     .payment__block
       .payment__info.wow.slideInLeft
         span.payment__subtitle Доступ к курсу
